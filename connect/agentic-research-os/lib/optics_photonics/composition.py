@@ -108,14 +108,16 @@ def remove(selections):
     return environments.uninstall(selections)
 
 
-def request_plan(run_id):
+def request_plan(run_id, *, required=True):
     with jobs.database() as db:
         rows = db.execute('SELECT payload FROM requests WHERE run_id=?', (run_id,)).fetchall()
     for row in rows:
         payload = json.loads(row[0])
         if payload.get('operation') == 'environment_prepare':
             return payload['plan']
-    raise ValueError('Unknown environment preparation task')
+    if required:
+        raise ValueError('Unknown environment preparation task')
+    return None
 
 
 def outcome(run_id):
@@ -140,7 +142,6 @@ def outcome(run_id):
 
 
 def task(run_id, starting=False):
-    request_plan(run_id)
     value = jobs.status(run_id, limit=200, include_results=False)
     status = 'working' if starting or value['state'] not in jobs.TERMINAL else (
         'completed' if value['state'] == 'succeeded' else 'cancelled' if value['state'] == 'cancelled' else 'failed')
@@ -159,15 +160,15 @@ def task_rpc(method, task_id, cancellation=None):
         return value
     if method == 'tasks/cancel':
         if value['status'] != 'working':
-            raise ValueError('The preparation task is already terminal')
+            raise ValueError('The task is already terminal')
         jobs.cancel(task_id)
     while (value := task(task_id))['status'] == 'working':
         if cancellation and cancellation():
-            raise InterruptedError('The task request was disconnected; preparation continues')
+            raise InterruptedError('The task request was disconnected; work continues')
         time.sleep(.1)
     if method == 'tasks/cancel':
         return value
-    result = outcome(task_id)
+    result = outcome(task_id) if request_plan(task_id, required=False) is not None else jobs.status(task_id)
     return {'content': [{'type': 'text', 'text': json.dumps(result, ensure_ascii=False)}],
             'structuredContent': result, 'isError': value['status'] != 'completed',
             '_meta': {'io.modelcontextprotocol/related-task': {'taskId': task_id}}}

@@ -140,6 +140,8 @@ optics-photonics connect agentic-research-os --output optics-plugin
 
 MCP 包含软件检索、材料折射率（`materials`，来自 refractiveindex.info 数据库）、环境准备、连接、资源设置、提交、任务查询、取消、继续、文件读取与下载。`prepare_environment` 在后台按配方安装，返回任务编号；安装完成后软件环境自动登记。提交计算时如果软件还没有环境，会自动先安装。操作方法和研究方法由两个 Skills 及其参考文件按需提供；不加载 Skills 的宿主用 `read_guide` 读取其中任何一份。
 
+`environment_prepare`、`prepare_environment`、`submit_calculation`、`submit_workflow`、`sample_episodes` 和 `resume_run` 支持可选的 MCP Tasks。传入 `task: {}` 时，原有 run ID 就是 Task ID；`tasks/get`、`tasks/result` 和 `tasks/cancel` 查询或控制同一份工作。环境准备保留 ready/pending 结果，计算任务返回最终运行记录及结果。普通调用保持原来的返回方式，`run_status` 仍是有界的即时查询。计算尚在运行时须保留其执行容器；脱离父进程的 worker 不能跨容器终止存活。
+
 计算发生在 MCP 服务所在的计算机。远程机器可通过 SSH 启动 stdio 服务，保持连接程序与科学环境在同一台机器：`ssh -T USER@HOST /path/to/python -m optics_photonics mcp`。`read_result` 把内容传回 Agent，`read_array` 传回 NPY/NPZ 数组的一部分；`download_result` 写入服务所在机器的目标路径。TypeScript 客户端的 `download` 通过连接把文件内容传到客户端所在的机器；特别大的远端文件仍可用 SSH/SFTP 取回。
 
 更新时安装新版本并生成新的插件目录，由宿主更新和激活。科学环境、研究记录和结果保留在 `OPTICS_HOME` 或 `~/.optics-photonics`。

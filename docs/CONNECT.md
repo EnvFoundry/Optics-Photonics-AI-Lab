@@ -128,6 +128,15 @@ optics-photonics connect agentic-research-os --output optics-plugin
 
 MCP provides software search, material refractive indices (`materials`, from the refractiveindex.info database), environment preparation/binding, resource settings, submission, history, status, cancellation, resumption and result access. `prepare_environment` installs a tool's recipe in the background and returns a run ID; successful installation registers the environment. A submission for a tool without an environment does this itself. Two Skills and their references supply operating and scientific guidance on demand; `read_guide` returns any of them to a host that does not load Skills.
 
+MCP Tasks are optional for `environment_prepare`, `prepare_environment`,
+`submit_calculation`, `submit_workflow`, `sample_episodes` and `resume_run`.
+With `task: {}`, the existing run ID is the Task ID; `tasks/get`, `tasks/result`
+and `tasks/cancel` observe or control that same work. Environment preparation
+keeps its ready/pending result; calculation tasks return the final run and its
+results. Ordinary calls retain their existing responses, and `run_status`
+remains a bounded immediate query. Keep the execution container alive while
+its calculations run; a detached worker does not survive container termination.
+
 Computations run on the MCP host. SSH can launch the stdio server on a workstation with the scientific software: `ssh -T USER@HOST /path/to/python -m optics_photonics mcp`. `read_result` returns bounded text/binary contents and `read_array` part of an NPY/NPZ array. `download_result` copies to a path on the MCP host. The TypeScript client's `download` transfers a file's content through the connection; SSH/SFTP remains an option for very large remote files.
 
 Use a persistent computing host for long research runs. A detached worker survives the submitting process, but a host that disposes of the entire container or process group also stops its workers. For such Agent environments, connect to the scientific workstation over SSH rather than starting the calculation inside a disposable tool execution.

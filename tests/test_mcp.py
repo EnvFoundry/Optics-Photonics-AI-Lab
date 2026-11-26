@@ -80,6 +80,33 @@ class ConcurrentRequestsCase(unittest.TestCase):
             time.sleep(.05)
         remove(self.temp)
 
+    def test_resumed_calculation_is_a_task_and_survives_stdio_reconnection(self):
+        self.session.send({'jsonrpc': '2.0', 'id': 'tools', 'method': 'tools/list'})
+        listed = {item['name']: item for item in self.session.reply()[0]['result']['tools']}
+        for name in ('environment_prepare', 'prepare_environment', 'submit_calculation',
+                     'submit_workflow', 'sample_episodes', 'resume_run'):
+            self.assertEqual(listed[name]['execution']['taskSupport'], 'optional')
+        self.assertNotIn('execution', listed['run_status'])
+        jobs.cancel(self.run_id, path=self.home)
+        self.assertEqual(jobs.status(self.run_id, path=self.home, wait=10)['state'], 'cancelled')
+        (self.home / 'slow.py').write_text('print("calculation completed")\n')
+        self.session.send({'jsonrpc': '2.0', 'id': 'resume', 'method': 'tools/call',
+                           'params': {'name': 'resume_run', 'task': {}, 'arguments': {'run_id': self.run_id}}})
+        task = self.session.reply()[0]['result']['task']
+        self.assertEqual(task['taskId'], self.run_id)
+        self.assertEqual(self.session.close(), 0)
+        self.session.release()
+        self.session = Session(self.home)
+        self.session.send({'jsonrpc': '2.0', 'id': 'result', 'method': 'tasks/result', 'params': {'taskId': self.run_id}})
+        result = self.session.reply()[0]['result']
+        self.assertFalse(result['isError'], result)
+        self.assertEqual(result['structuredContent']['id'], self.run_id)
+        self.assertEqual(result['structuredContent']['state'], 'succeeded')
+        self.assertEqual(result['structuredContent']['steps'][0]['attempt'], 2)
+        self.assertEqual(result['_meta']['io.modelcontextprotocol/related-task']['taskId'], self.run_id)
+        self.session.call('status', 'run_status', {'run_id': self.run_id})
+        self.assertEqual(self.session.reply()[0]['result']['structuredContent']['state'], 'succeeded')
+
     def test_short_requests_are_answered_while_a_status_wait_is_active(self):
         s = self.session
         sent = time.monotonic()
