@@ -13,7 +13,7 @@ ARGUMENTS = {key for _, _, spec in mcp.TOOLS for key in spec['properties']}
 # Identifiers that belong to programs and records, not to the tool interface, and the inputs of packaged programs.
 PROGRAM = {'optics_photonics', 'make_env', 'make_policy', 'episode_end', 'episode_error', 'inspect_project', 'solve_project',
            'opticstudio_directory', 'zosapi_nethelper', 'optics_program', 'optics_main',
-           'next_before', 'restored_from', 'reused_evaluations', 'reused_points', 'integration_guides'} | {
+           'next_before', 'restored_from', 'reused_evaluations', 'reused_points', 'integration_guides', 'ready_modules'} | {
     name for items in programs.catalog().values() for spec in items.values() for name in spec['inputs']}
 
 

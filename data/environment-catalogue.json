@@ -1,0 +1,4417 @@
+{
+  "fields": [
+    {
+      "id": "optics",
+      "title": "Optics & photonics",
+      "titles": {
+        "en": "Optics & photonics",
+        "zh-CN": "光学与光子学"
+      },
+      "directions": [
+        {
+          "id": "ray",
+          "title": "Geometrical optics & lighting",
+          "titles": {
+            "en": "Geometrical optics & lighting",
+            "zh-CN": "几何光学与照明"
+          },
+          "summary": "Lenses / stray light / radiometry",
+          "modules": [
+            "opticstudio",
+            "codev",
+            "lighttools",
+            "fred",
+            "tracepro",
+            "oslo",
+            "asap",
+            "virtuallab",
+            "speos",
+            "comsol",
+            "synopsys-osd",
+            "osloedu",
+            "rayoptics",
+            "optiland",
+            "raysect",
+            "raytracing",
+            "prysm",
+            "rezonator",
+            "mitsuba",
+            "pbrt",
+            "shadow",
+            "xrt",
+            "freecad"
+          ]
+        },
+        {
+          "id": "wave",
+          "title": "Wave optics & propagation",
+          "titles": {
+            "en": "Wave optics & propagation",
+            "zh-CN": "波动光学与传播"
+          },
+          "summary": "Diffraction / polarization / wavefronts",
+          "modules": [
+            "opticstudio",
+            "codev",
+            "fred",
+            "asap",
+            "virtuallab",
+            "optiland",
+            "lightpipes",
+            "poppy",
+            "hcipy",
+            "prysm",
+            "diffractio",
+            "torchoptics",
+            "waveprop",
+            "finesse",
+            "pydhm",
+            "srw",
+            "xrt",
+            "slmsuite",
+            "py-pol"
+          ]
+        },
+        {
+          "id": "em",
+          "title": "Electromagnetics & devices",
+          "titles": {
+            "en": "Electromagnetics & devices",
+            "zh-CN": "全波电磁与器件"
+          },
+          "summary": "FDTD / FEM / modes",
+          "modules": [
+            "lumerical",
+            "comsol",
+            "cst",
+            "rsoft",
+            "jcm",
+            "photond",
+            "tidy3d",
+            "crosslight",
+            "meep",
+            "mpb",
+            "fdtdx",
+            "openems",
+            "legume",
+            "ceviche",
+            "solcore",
+            "adda",
+            "pygdm",
+            "gmsh",
+            "refractiveindex",
+            "fenics",
+            "ngsolve"
+          ]
+        },
+        {
+          "id": "periodic",
+          "title": "Periodic structures & metasurfaces",
+          "titles": {
+            "en": "Periodic structures & metasurfaces",
+            "zh-CN": "周期结构与超表面"
+          },
+          "summary": "RCWA / crystals / gratings",
+          "modules": [
+            "virtuallab",
+            "lumerical",
+            "cst",
+            "rsoft",
+            "jcm",
+            "tidy3d",
+            "meep",
+            "mpb",
+            "s4",
+            "torcwa",
+            "grcwa",
+            "legume",
+            "treams"
+          ]
+        },
+        {
+          "id": "film",
+          "title": "Thin films & materials",
+          "titles": {
+            "en": "Thin films & materials",
+            "zh-CN": "薄膜与材料"
+          },
+          "summary": "Coatings / spectra / optical constants",
+          "modules": [
+            "macleod",
+            "optilayer",
+            "tfcalc",
+            "s4",
+            "torcwa",
+            "grcwa",
+            "tmm",
+            "solcore",
+            "smuthi",
+            "refractiveindex"
+          ]
+        },
+        {
+          "id": "pic",
+          "title": "Integrated photonics & layout",
+          "titles": {
+            "en": "Integrated photonics & layout",
+            "zh-CN": "集成光子与版图"
+          },
+          "summary": "PDKs / circuits / fabrication",
+          "modules": [
+            "lumerical",
+            "rsoft",
+            "jcm",
+            "photond",
+            "tidy3d",
+            "ipkiss",
+            "vpi",
+            "optisystem",
+            "photonforge",
+            "meep",
+            "fdtdx",
+            "ceviche",
+            "gdsfactory",
+            "klayout",
+            "sax",
+            "siepic",
+            "nazca",
+            "perceval",
+            "strawberry"
+          ]
+        },
+        {
+          "id": "fiber",
+          "title": "Fibers & communications",
+          "titles": {
+            "en": "Fibers & communications",
+            "zh-CN": "光纤与通信"
+          },
+          "summary": "Nonlinearity / DSP / links",
+          "modules": [
+            "photond",
+            "vpi",
+            "optisystem",
+            "rpfiber",
+            "rpresonator",
+            "matlab",
+            "luna",
+            "pyfmas",
+            "laserfun",
+            "opticomm",
+            "julia"
+          ]
+        },
+        {
+          "id": "laser",
+          "title": "Lasers & precision interferometry",
+          "titles": {
+            "en": "Lasers & precision interferometry",
+            "zh-CN": "激光与精密干涉"
+          },
+          "summary": "Resonators / ultrafast / noise",
+          "modules": [
+            "comsol",
+            "rsoft",
+            "vpi",
+            "rpfiber",
+            "rpresonator",
+            "crosslight",
+            "raytracing",
+            "lightpipes",
+            "qutip",
+            "luna",
+            "pyfmas",
+            "laserfun",
+            "finesse",
+            "rezonator"
+          ]
+        },
+        {
+          "id": "scatter",
+          "title": "Scattering & particles",
+          "titles": {
+            "en": "Scattering & particles",
+            "zh-CN": "散射与颗粒"
+          },
+          "summary": "Mie / DDA / T-matrix",
+          "modules": [
+            "raysect",
+            "adda",
+            "miepython",
+            "treams",
+            "smuthi",
+            "pygdm",
+            "mcx",
+            "mmc",
+            "holopy"
+          ]
+        },
+        {
+          "id": "quantum",
+          "title": "Quantum optics",
+          "titles": {
+            "en": "Quantum optics",
+            "zh-CN": "量子光学"
+          },
+          "summary": "Master equations / Fock / circuits",
+          "modules": [
+            "mathematica",
+            "qutip",
+            "quantumoptics",
+            "perceval",
+            "strawberry",
+            "finesse",
+            "julia"
+          ]
+        },
+        {
+          "id": "bio",
+          "title": "Biomedical photon transport",
+          "titles": {
+            "en": "Biomedical photon transport",
+            "zh-CN": "生物光子输运"
+          },
+          "summary": "Tissue / Monte Carlo",
+          "modules": [
+            "mcx",
+            "mmc"
+          ]
+        },
+        {
+          "id": "xray",
+          "title": "X-rays & beamlines",
+          "titles": {
+            "en": "X-rays & beamlines",
+            "zh-CN": "X 射线与束线"
+          },
+          "summary": "Synchrotrons / coherent imaging",
+          "modules": [
+            "ptypy",
+            "pynx",
+            "srw",
+            "shadow",
+            "xrt",
+            "bluesky"
+          ]
+        },
+        {
+          "id": "imaging",
+          "title": "Computational imaging",
+          "titles": {
+            "en": "Computational imaging",
+            "zh-CN": "计算成像与重建"
+          },
+          "summary": "PSFs / holography / phase retrieval",
+          "modules": [
+            "speos",
+            "matlab",
+            "ptypy",
+            "poppy",
+            "hcipy",
+            "prysm",
+            "diffractio",
+            "torchoptics",
+            "waveprop",
+            "holopy",
+            "pydhm",
+            "pynx",
+            "mitsuba",
+            "pbrt",
+            "pylablib",
+            "micromanager",
+            "harvesters",
+            "slmsuite",
+            "octave",
+            "scikitimage",
+            "napari",
+            "scipy",
+            "pytorch"
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Laboratory instruments & acquisition",
+          "titles": {
+            "en": "Laboratory instruments & acquisition",
+            "zh-CN": "实验仪器与采集"
+          },
+          "summary": "VISA / cameras / stages",
+          "modules": [
+            "labview",
+            "pyvisa",
+            "pymeasure",
+            "pylablib",
+            "qcodes",
+            "bluesky",
+            "micromanager",
+            "harvesters",
+            "nidaqmx",
+            "seabreeze",
+            "slmsuite"
+          ]
+        },
+        {
+          "id": "foundation",
+          "title": "Derivation & digital foundations",
+          "titles": {
+            "en": "Derivation & digital foundations",
+            "zh-CN": "推导与数字基础"
+          },
+          "summary": "Algebra / CAD / data / imaging",
+          "modules": [
+            "matlab",
+            "mathematica",
+            "maple",
+            "sympy",
+            "sage",
+            "octave",
+            "julia",
+            "freecad",
+            "gmsh",
+            "scikitimage",
+            "napari",
+            "refractiveindex",
+            "fenics",
+            "ngsolve",
+            "scipy",
+            "jax",
+            "pytorch",
+            "py-pol"
+          ]
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": "opticstudio",
+      "title": "Ansys Zemax OpticStudio",
+      "kind": "software",
+      "titles": {
+        "en": "Ansys Zemax OpticStudio",
+        "zh-CN": "Ansys Zemax OpticStudio"
+      },
+      "summary": "Lens design, aberrations, tolerancing, stray light and selected coherent propagation workflows.",
+      "summaries": {
+        "en": "Lens design, aberrations, tolerancing, stray light and selected coherent propagation workflows.",
+        "zh-CN": "镜头、成像像差、公差、杂散光和部分相干传播的综合设计环境。"
+      },
+      "components": [
+        "opticstudio"
+      ],
+      "includes": []
+    },
+    {
+      "id": "codev",
+      "title": "Keysight CODE V",
+      "kind": "software",
+      "titles": {
+        "en": "Keysight CODE V",
+        "zh-CN": "Keysight CODE V"
+      },
+      "summary": "Lens starting points, aberration optimization, tolerance analysis and image quality evaluation.",
+      "summaries": {
+        "en": "Lens starting points, aberration optimization, tolerance analysis and image quality evaluation.",
+        "zh-CN": "镜头初始设计、像差优化、公差分析和成像性能评估。"
+      },
+      "components": [
+        "codev"
+      ],
+      "includes": []
+    },
+    {
+      "id": "lighttools",
+      "title": "Keysight LightTools",
+      "kind": "software",
+      "titles": {
+        "en": "Keysight LightTools",
+        "zh-CN": "Keysight LightTools"
+      },
+      "summary": "Illumination, light guides, displays and stray light, with source, material and scattering models.",
+      "summaries": {
+        "en": "Illumination, light guides, displays and stray light, with source, material and scattering models.",
+        "zh-CN": "照明、导光、显示与杂散光；包含材料、散射和光源建模。"
+      },
+      "components": [
+        "lighttools"
+      ],
+      "includes": []
+    },
+    {
+      "id": "fred",
+      "title": "FRED",
+      "kind": "software",
+      "titles": {
+        "en": "FRED",
+        "zh-CN": "FRED"
+      },
+      "summary": "Propagation through complex optomechanical systems, scattering, stray light and laser systems.",
+      "summaries": {
+        "en": "Propagation through complex optomechanical systems, scattering, stray light and laser systems.",
+        "zh-CN": "复杂光机系统、散射、杂散光和激光系统的传播分析。"
+      },
+      "components": [
+        "fred"
+      ],
+      "includes": []
+    },
+    {
+      "id": "tracepro",
+      "title": "TracePro",
+      "kind": "software",
+      "titles": {
+        "en": "TracePro",
+        "zh-CN": "TracePro"
+      },
+      "summary": "Illumination, stray light, optical flux and optomechanical geometry analysis and optimization.",
+      "summaries": {
+        "en": "Illumination, stray light, optical flux and optomechanical geometry analysis and optimization.",
+        "zh-CN": "照明、杂散光、光通量与光机几何的分析和优化。"
+      },
+      "components": [
+        "tracepro"
+      ],
+      "includes": []
+    },
+    {
+      "id": "oslo",
+      "title": "OSLO",
+      "kind": "software",
+      "titles": {
+        "en": "OSLO",
+        "zh-CN": "OSLO"
+      },
+      "summary": "Optical layouts, aberrations, optimization and tolerance calculations.",
+      "summaries": {
+        "en": "Optical layouts, aberrations, optimization and tolerance calculations.",
+        "zh-CN": "光学系统布局、像差、优化和公差计算。"
+      },
+      "components": [
+        "oslo"
+      ],
+      "includes": []
+    },
+    {
+      "id": "asap",
+      "title": "ASAP",
+      "kind": "software",
+      "titles": {
+        "en": "ASAP",
+        "zh-CN": "ASAP"
+      },
+      "summary": "Complex optical systems, illumination, scattering and stray light analysis.",
+      "summaries": {
+        "en": "Complex optical systems, illumination, scattering and stray light analysis.",
+        "zh-CN": "复杂光学系统、照明、散射与杂散光分析。"
+      },
+      "components": [
+        "asap"
+      ],
+      "includes": []
+    },
+    {
+      "id": "virtuallab",
+      "title": "VirtualLab Fusion",
+      "kind": "software",
+      "titles": {
+        "en": "VirtualLab Fusion",
+        "zh-CN": "VirtualLab Fusion"
+      },
+      "summary": "Joint modeling of diffraction, polarization, gratings, free-space systems and complex optical elements.",
+      "summaries": {
+        "en": "Joint modeling of diffraction, polarization, gratings, free-space systems and complex optical elements.",
+        "zh-CN": "衍射、偏振、光栅、自由空间系统和复杂光学元件的联合建模。"
+      },
+      "components": [
+        "virtuallab"
+      ],
+      "includes": []
+    },
+    {
+      "id": "speos",
+      "title": "Ansys Speos",
+      "kind": "software",
+      "titles": {
+        "en": "Ansys Speos",
+        "zh-CN": "Ansys Speos"
+      },
+      "summary": "Illumination, automotive lighting, displays, sensors and human-vision-related optomechanical design.",
+      "summaries": {
+        "en": "Illumination, automotive lighting, displays, sensors and human-vision-related optomechanical design.",
+        "zh-CN": "照明、车灯、显示、传感器与人眼视觉相关的光机设计。"
+      },
+      "components": [
+        "speos"
+      ],
+      "includes": []
+    },
+    {
+      "id": "lumerical",
+      "title": "Ansys Lumerical",
+      "kind": "software",
+      "titles": {
+        "en": "Ansys Lumerical",
+        "zh-CN": "Ansys Lumerical"
+      },
+      "summary": "FDTD, MODE, Multiphysics and INTERCONNECT form a device-to-circuit product family.",
+      "summaries": {
+        "en": "FDTD, MODE, Multiphysics and INTERCONNECT form a device-to-circuit product family.",
+        "zh-CN": "FDTD、MODE、Multiphysics 与 INTERCONNECT 组成器件到电路的产品族。"
+      },
+      "components": [
+        "lumerical"
+      ],
+      "includes": []
+    },
+    {
+      "id": "comsol",
+      "title": "COMSOL Multiphysics",
+      "kind": "software",
+      "titles": {
+        "en": "COMSOL Multiphysics",
+        "zh-CN": "COMSOL Multiphysics"
+      },
+      "summary": "Wave optics and ray optics coupled to thermal, structural and charge-transport models.",
+      "summaries": {
+        "en": "Wave optics and ray optics coupled to thermal, structural and charge-transport models.",
+        "zh-CN": "波动光学、射线光学与热、结构、电荷等耦合；适合热光和应力光学模型。"
+      },
+      "components": [
+        "comsol"
+      ],
+      "includes": []
+    },
+    {
+      "id": "cst",
+      "title": "CST Studio Suite",
+      "kind": "software",
+      "titles": {
+        "en": "CST Studio Suite",
+        "zh-CN": "CST Studio Suite"
+      },
+      "summary": "Electromagnetics from RF and terahertz to selected optical problems, including structural response and coupling.",
+      "summaries": {
+        "en": "Electromagnetics from RF and terahertz to selected optical problems, including structural response and coupling.",
+        "zh-CN": "从射频、太赫兹到部分光学电磁问题；适合结构电磁响应与耦合。"
+      },
+      "components": [
+        "cst"
+      ],
+      "includes": []
+    },
+    {
+      "id": "rsoft",
+      "title": "Keysight RSoft Photonic Device Tools",
+      "kind": "software",
+      "titles": {
+        "en": "Keysight RSoft Photonic Device Tools",
+        "zh-CN": "Keysight RSoft Photonic Device Tools"
+      },
+      "summary": "Device tools include FullWAVE, BeamPROP, DiffractMOD, FemSIM, ModePROP and LaserMOD.",
+      "summaries": {
+        "en": "Device tools include FullWAVE, BeamPROP, DiffractMOD, FemSIM, ModePROP and LaserMOD.",
+        "zh-CN": "FullWAVE、BeamPROP、DiffractMOD、FemSIM、ModePROP、LaserMOD 等器件级工具。"
+      },
+      "components": [
+        "rsoft"
+      ],
+      "includes": []
+    },
+    {
+      "id": "jcm",
+      "title": "JCMsuite",
+      "kind": "software",
+      "titles": {
+        "en": "JCMsuite",
+        "zh-CN": "JCMsuite"
+      },
+      "summary": "Nanophotonics, waveguides, scattering, lithography and parameter reconstruction.",
+      "summaries": {
+        "en": "Nanophotonics, waveguides, scattering, lithography and parameter reconstruction.",
+        "zh-CN": "纳米光学、波导、散射、光刻与参数重建。"
+      },
+      "components": [
+        "jcm"
+      ],
+      "includes": []
+    },
+    {
+      "id": "photond",
+      "title": "Photon Design FIMMWAVE / FIMMPROP",
+      "kind": "software",
+      "titles": {
+        "en": "Photon Design FIMMWAVE / FIMMPROP",
+        "zh-CN": "Photon Design FIMMWAVE / FIMMPROP"
+      },
+      "summary": "Waveguide and fiber modes, photonic-device propagation and mode conversion.",
+      "summaries": {
+        "en": "Waveguide and fiber modes, photonic-device propagation and mode conversion.",
+        "zh-CN": "波导与光纤模态、光子器件传播和模式转换。"
+      },
+      "components": [
+        "photond"
+      ],
+      "includes": []
+    },
+    {
+      "id": "tidy3d",
+      "title": "Flexcompute Tidy3D",
+      "kind": "software",
+      "titles": {
+        "en": "Flexcompute Tidy3D",
+        "zh-CN": "Flexcompute Tidy3D"
+      },
+      "summary": "Define devices and simulations in Python, then submit cloud solves and analyze results.",
+      "summaries": {
+        "en": "Define devices and simulations in Python, then submit cloud solves and analyze results.",
+        "zh-CN": "以 Python 定义器件和仿真，调用云端求解与结果分析。"
+      },
+      "components": [
+        "tidy3d"
+      ],
+      "includes": []
+    },
+    {
+      "id": "ipkiss",
+      "title": "Luceda IPKISS",
+      "kind": "software",
+      "titles": {
+        "en": "Luceda IPKISS",
+        "zh-CN": "Luceda IPKISS"
+      },
+      "summary": "Reusable PIC design combines geometry, ports, compact models, layout and verification.",
+      "summaries": {
+        "en": "Reusable PIC design combines geometry, ports, compact models, layout and verification.",
+        "zh-CN": "把器件几何、端口、紧凑模型、版图和验证组织为可复用 PIC 设计。"
+      },
+      "components": [
+        "ipkiss"
+      ],
+      "includes": []
+    },
+    {
+      "id": "vpi",
+      "title": "VPIphotonics Design Suite",
+      "kind": "software",
+      "titles": {
+        "en": "VPIphotonics Design Suite",
+        "zh-CN": "VPIphotonics Design Suite"
+      },
+      "summary": "Joint simulation of transmitters, fiber links, amplifiers, receiver DSP and integrated photonics.",
+      "summaries": {
+        "en": "Joint simulation of transmitters, fiber links, amplifiers, receiver DSP and integrated photonics.",
+        "zh-CN": "发射机、光纤链路、放大器、接收 DSP 与集成光子系统的联合仿真。"
+      },
+      "components": [
+        "vpi"
+      ],
+      "includes": []
+    },
+    {
+      "id": "optisystem",
+      "title": "Optiwave OptiSystem",
+      "kind": "software",
+      "titles": {
+        "en": "Optiwave OptiSystem",
+        "zh-CN": "Optiwave OptiSystem"
+      },
+      "summary": "Modulation, fiber transmission, amplification, detection and bit-error performance.",
+      "summaries": {
+        "en": "Modulation, fiber transmission, amplification, detection and bit-error performance.",
+        "zh-CN": "调制、光纤传输、放大、探测和误码性能计算。"
+      },
+      "components": [
+        "optisystem"
+      ],
+      "includes": []
+    },
+    {
+      "id": "macleod",
+      "title": "Essential Macleod",
+      "kind": "software",
+      "titles": {
+        "en": "Essential Macleod",
+        "zh-CN": "Essential Macleod"
+      },
+      "summary": "Multilayer coatings, reflection and transmission, color, group delay and manufacturing analysis.",
+      "summaries": {
+        "en": "Multilayer coatings, reflection and transmission, color, group delay and manufacturing analysis.",
+        "zh-CN": "多层镀膜、反射透射、色彩、群延迟及制造过程相关设计。"
+      },
+      "components": [
+        "macleod"
+      ],
+      "includes": []
+    },
+    {
+      "id": "optilayer",
+      "title": "OptiLayer / OptiRE / OptiChar",
+      "kind": "software",
+      "titles": {
+        "en": "OptiLayer / OptiRE / OptiChar",
+        "zh-CN": "OptiLayer / OptiRE / OptiChar"
+      },
+      "summary": "Multilayer optimization, spectral inversion and in-process manufacturing correction.",
+      "summaries": {
+        "en": "Multilayer optimization, spectral inversion and in-process manufacturing correction.",
+        "zh-CN": "从多层膜优化到光谱反演与在线制造修正。"
+      },
+      "components": [
+        "optilayer"
+      ],
+      "includes": []
+    },
+    {
+      "id": "rpfiber",
+      "title": "RP Fiber Power",
+      "kind": "software",
+      "titles": {
+        "en": "RP Fiber Power",
+        "zh-CN": "RP Fiber Power"
+      },
+      "summary": "Fiber lasers and amplifiers: pump, signal, ASE, dynamics and ultrashort pulses.",
+      "summaries": {
+        "en": "Fiber lasers and amplifiers: pump, signal, ASE, dynamics and ultrashort pulses.",
+        "zh-CN": "光纤激光器和放大器的泵浦、信号、ASE、动态与超短脉冲建模。"
+      },
+      "components": [
+        "rpfiber"
+      ],
+      "includes": []
+    },
+    {
+      "id": "rpresonator",
+      "title": "RP Resonator / RP ProPulse",
+      "kind": "software",
+      "titles": {
+        "en": "RP Resonator / RP ProPulse",
+        "zh-CN": "RP Resonator / RP ProPulse"
+      },
+      "summary": "Laser cavity modes and stability, and ultrashort-pulse round trips; choose between the two products by task.",
+      "summaries": {
+        "en": "Laser cavity modes and stability, and ultrashort-pulse round trips; choose between the two products by task.",
+        "zh-CN": "激光腔模、稳定性与超短脉冲循环；两个产品按任务选用。"
+      },
+      "components": [
+        "rpresonator"
+      ],
+      "includes": []
+    },
+    {
+      "id": "crosslight",
+      "title": "Crosslight APSYS / PICS3D",
+      "kind": "software",
+      "titles": {
+        "en": "Crosslight APSYS / PICS3D",
+        "zh-CN": "Crosslight APSYS / PICS3D"
+      },
+      "summary": "Coupled electrical, optical and thermal modeling of LEDs, semiconductor lasers and related devices.",
+      "summaries": {
+        "en": "Coupled electrical, optical and thermal modeling of LEDs, semiconductor lasers and related devices.",
+        "zh-CN": "LED、半导体激光器及器件的电学、光学和热学联合建模。"
+      },
+      "components": [
+        "crosslight"
+      ],
+      "includes": []
+    },
+    {
+      "id": "synopsys-osd",
+      "title": "SYNOPSYS Lens Design(OSD)",
+      "kind": "software",
+      "titles": {
+        "en": "SYNOPSYS Lens Design(OSD)",
+        "zh-CN": "SYNOPSYS Lens Design（OSD）"
+      },
+      "summary": "Lens design software from Optical Systems Design, separate from the former Synopsys optical software business.",
+      "summaries": {
+        "en": "Lens design software from Optical Systems Design, separate from the former Synopsys optical software business.",
+        "zh-CN": "Optical Systems Design 的镜头设计软件，独立于原 Synopsys 光学软件业务。"
+      },
+      "components": [
+        "synopsys-osd"
+      ],
+      "includes": []
+    },
+    {
+      "id": "tfcalc",
+      "title": "TFCalc",
+      "kind": "software",
+      "titles": {
+        "en": "TFCalc",
+        "zh-CN": "TFCalc"
+      },
+      "summary": "Spectral performance, design and optimization of multilayer thin films.",
+      "summaries": {
+        "en": "Spectral performance, design and optimization of multilayer thin films.",
+        "zh-CN": "多层薄膜的光谱性能、设计和优化。"
+      },
+      "components": [
+        "tfcalc"
+      ],
+      "includes": []
+    },
+    {
+      "id": "matlab",
+      "title": "MATLAB / Simulink",
+      "kind": "software",
+      "titles": {
+        "en": "MATLAB / Simulink",
+        "zh-CN": "MATLAB / Simulink"
+      },
+      "summary": "Optical algorithms, signal processing, parameter estimation, controls and system models, with task-specific toolboxes.",
+      "summaries": {
+        "en": "Optical algorithms, signal processing, parameter estimation, controls and system models, with task-specific toolboxes.",
+        "zh-CN": "光学算法开发、信号处理、参数估计、控制和系统级建模；工具箱按任务选择。"
+      },
+      "components": [
+        "matlab"
+      ],
+      "includes": []
+    },
+    {
+      "id": "mathematica",
+      "title": "Wolfram Mathematica",
+      "kind": "software",
+      "titles": {
+        "en": "Wolfram Mathematica",
+        "zh-CN": "Wolfram Mathematica"
+      },
+      "summary": "Wave equations, asymptotic expansions, integrals, matrices and mixed symbolic-numerical derivation.",
+      "summaries": {
+        "en": "Wave equations, asymptotic expansions, integrals, matrices and mixed symbolic-numerical derivation.",
+        "zh-CN": "波动方程、近似展开、积分、矩阵及解析—数值联合推导。"
+      },
+      "components": [
+        "mathematica"
+      ],
+      "includes": []
+    },
+    {
+      "id": "maple",
+      "title": "Maple",
+      "kind": "software",
+      "titles": {
+        "en": "Maple",
+        "zh-CN": "Maple"
+      },
+      "summary": "Analytical modeling, symbolic derivation, differential equations and executable formula generation.",
+      "summaries": {
+        "en": "Analytical modeling, symbolic derivation, differential equations and executable formula generation.",
+        "zh-CN": "解析建模、符号推导、微分方程和可执行公式生成。"
+      },
+      "components": [
+        "maple"
+      ],
+      "includes": []
+    },
+    {
+      "id": "labview",
+      "title": "NI LabVIEW",
+      "kind": "software",
+      "titles": {
+        "en": "NI LabVIEW",
+        "zh-CN": "NI LabVIEW"
+      },
+      "summary": "Laboratory programs (VIs) that control instruments and acquire and process signals; many existing setups are written in it.",
+      "summaries": {
+        "en": "Laboratory programs (VIs) that control instruments and acquire and process signals; many existing setups are written in it.",
+        "zh-CN": "控制仪器、采集并处理信号的实验室程序（VI）；大量现有实验装置用它编写。"
+      },
+      "components": [
+        "labview"
+      ],
+      "includes": []
+    },
+    {
+      "id": "photonforge",
+      "title": "PhotonForge Community",
+      "kind": "software",
+      "titles": {
+        "en": "PhotonForge Community",
+        "zh-CN": "PhotonForge Community"
+      },
+      "summary": "Local layout, schematics, routing and circuit simulation, with links to Tidy3D device models.",
+      "summaries": {
+        "en": "Local layout, schematics, routing and circuit simulation, with links to Tidy3D device models.",
+        "zh-CN": "本地版图、原理图、布线与电路仿真；可连接 Tidy3D 器件模型。"
+      },
+      "components": [
+        "photonforge"
+      ],
+      "includes": []
+    },
+    {
+      "id": "osloedu",
+      "title": "OSLO EDU",
+      "kind": "software",
+      "titles": {
+        "en": "OSLO EDU",
+        "zh-CN": "OSLO EDU"
+      },
+      "summary": "Free learning environment for lens layouts, ray tracing and basic analysis.",
+      "summaries": {
+        "en": "Free learning environment for lens layouts, ray tracing and basic analysis.",
+        "zh-CN": "免费学习镜头布局、光线追迹和基本分析。"
+      },
+      "components": [
+        "osloedu"
+      ],
+      "includes": []
+    },
+    {
+      "id": "ptypy",
+      "title": "PtyPy",
+      "kind": "software",
+      "titles": {
+        "en": "PtyPy",
+        "zh-CN": "PtyPy"
+      },
+      "summary": "Iterative reconstruction and experimental data processing for scanning coherent diffraction imaging.",
+      "summaries": {
+        "en": "Iterative reconstruction and experimental data processing for scanning coherent diffraction imaging.",
+        "zh-CN": "相干衍射扫描成像的迭代重建与实验数据处理。"
+      },
+      "components": [
+        "ptypy"
+      ],
+      "includes": []
+    },
+    {
+      "id": "meep",
+      "title": "Meep",
+      "kind": "software",
+      "titles": {
+        "en": "Meep",
+        "zh-CN": "Meep"
+      },
+      "summary": "Full-wave propagation, resonances, scattering and nanophotonic devices.",
+      "summaries": {
+        "en": "Full-wave propagation, resonances, scattering and nanophotonic devices.",
+        "zh-CN": "全波电磁传播、共振、散射与纳米光子器件。"
+      },
+      "components": [
+        "meep"
+      ],
+      "includes": []
+    },
+    {
+      "id": "mpb",
+      "title": "MPB",
+      "kind": "software",
+      "titles": {
+        "en": "MPB",
+        "zh-CN": "MPB"
+      },
+      "summary": "Photonic-crystal bands, modes and periodic-medium eigenproblems.",
+      "summaries": {
+        "en": "Photonic-crystal bands, modes and periodic-medium eigenproblems.",
+        "zh-CN": "光子晶体能带、模式和周期介质本征问题。"
+      },
+      "components": [
+        "mpb"
+      ],
+      "includes": []
+    },
+    {
+      "id": "fdtdx",
+      "title": "FDTDX",
+      "kind": "software",
+      "titles": {
+        "en": "FDTDX",
+        "zh-CN": "FDTDX"
+      },
+      "summary": "Three-dimensional photonic structures and gradient-based inverse design.",
+      "summaries": {
+        "en": "Three-dimensional photonic structures and gradient-based inverse design.",
+        "zh-CN": "三维光子结构仿真与梯度驱动逆向设计。"
+      },
+      "components": [
+        "fdtdx"
+      ],
+      "includes": []
+    },
+    {
+      "id": "openems",
+      "title": "openEMS",
+      "kind": "software",
+      "titles": {
+        "en": "openEMS",
+        "zh-CN": "openEMS"
+      },
+      "summary": "Electromagnetics, RF and terahertz structures and related wave propagation.",
+      "summaries": {
+        "en": "Electromagnetics, RF and terahertz structures and related wave propagation.",
+        "zh-CN": "电磁、射频、太赫兹结构及相关波传播问题。"
+      },
+      "components": [
+        "openems"
+      ],
+      "includes": []
+    },
+    {
+      "id": "s4",
+      "title": "S⁴ / S4",
+      "kind": "software",
+      "titles": {
+        "en": "S⁴ / S4",
+        "zh-CN": "S⁴ / S4"
+      },
+      "summary": "Reflection, transmission and diffraction orders in periodic layered structures and gratings.",
+      "summaries": {
+        "en": "Reflection, transmission and diffraction orders in periodic layered structures and gratings.",
+        "zh-CN": "周期层状结构、光栅和衍射级次的反射透射。"
+      },
+      "components": [
+        "s4"
+      ],
+      "includes": []
+    },
+    {
+      "id": "torcwa",
+      "title": "torcwa",
+      "kind": "software",
+      "titles": {
+        "en": "torcwa",
+        "zh-CN": "torcwa"
+      },
+      "summary": "Gradient optimization of periodic nanostructures, metasurface cells and gratings.",
+      "summaries": {
+        "en": "Gradient optimization of periodic nanostructures, metasurface cells and gratings.",
+        "zh-CN": "周期纳米结构、超表面单胞和光栅的梯度优化。"
+      },
+      "components": [
+        "torcwa"
+      ],
+      "includes": []
+    },
+    {
+      "id": "grcwa",
+      "title": "grcwa",
+      "kind": "software",
+      "titles": {
+        "en": "grcwa",
+        "zh-CN": "grcwa"
+      },
+      "summary": "Multilayer periodic structures, diffraction and topology optimization research.",
+      "summaries": {
+        "en": "Multilayer periodic structures, diffraction and topology optimization research.",
+        "zh-CN": "多层周期结构、衍射和拓扑优化研究。"
+      },
+      "components": [
+        "grcwa"
+      ],
+      "includes": []
+    },
+    {
+      "id": "legume",
+      "title": "legume",
+      "kind": "software",
+      "titles": {
+        "en": "legume",
+        "zh-CN": "legume"
+      },
+      "summary": "Photonic-crystal slabs, modes and radiative-loss analysis.",
+      "summaries": {
+        "en": "Photonic-crystal slabs, modes and radiative-loss analysis.",
+        "zh-CN": "光子晶体薄板、模态与辐射损耗相关分析。"
+      },
+      "components": [
+        "legume"
+      ],
+      "includes": []
+    },
+    {
+      "id": "ceviche",
+      "title": "Ceviche",
+      "kind": "software",
+      "titles": {
+        "en": "Ceviche",
+        "zh-CN": "Ceviche"
+      },
+      "summary": "Small-scale electromagnetic inverse design and automatic-differentiation research.",
+      "summaries": {
+        "en": "Small-scale electromagnetic inverse design and automatic-differentiation research.",
+        "zh-CN": "小规模电磁逆向设计和自动微分方法研究。"
+      },
+      "components": [
+        "ceviche"
+      ],
+      "includes": []
+    },
+    {
+      "id": "tmm",
+      "title": "tmm",
+      "kind": "software",
+      "titles": {
+        "en": "tmm",
+        "zh-CN": "tmm"
+      },
+      "summary": "Planar multilayer reflection, transmission and absorption, including coherent and incoherent layer combinations.",
+      "summaries": {
+        "en": "Planar multilayer reflection, transmission and absorption, including coherent and incoherent layer combinations.",
+        "zh-CN": "平面多层膜反射、透射、吸收，以及相干与非相干层组合。"
+      },
+      "components": [
+        "tmm"
+      ],
+      "includes": []
+    },
+    {
+      "id": "solcore",
+      "title": "Solcore",
+      "kind": "software",
+      "titles": {
+        "en": "Solcore",
+        "zh-CN": "Solcore"
+      },
+      "summary": "Material parameters, optical absorption and solar-cell device calculations.",
+      "summaries": {
+        "en": "Material parameters, optical absorption and solar-cell device calculations.",
+        "zh-CN": "将材料、薄膜吸收与太阳电池电学模型连接起来。"
+      },
+      "components": [
+        "solcore"
+      ],
+      "includes": []
+    },
+    {
+      "id": "rayoptics",
+      "title": "RayOptics",
+      "kind": "software",
+      "titles": {
+        "en": "RayOptics",
+        "zh-CN": "RayOptics"
+      },
+      "summary": "Lens layouts, paraxial calculations, aberrations and optical-system analysis in Python.",
+      "summaries": {
+        "en": "Lens layouts, paraxial calculations, aberrations and optical-system analysis in Python.",
+        "zh-CN": "镜头建模、光线和波像差、近轴布局；可导入部分 Zemax / CODE V 格式。"
+      },
+      "components": [
+        "rayoptics"
+      ],
+      "includes": []
+    },
+    {
+      "id": "optiland",
+      "title": "Optiland",
+      "kind": "software",
+      "titles": {
+        "en": "Optiland",
+        "zh-CN": "Optiland"
+      },
+      "summary": "Lenses, freeform surfaces, polarization, coatings and differentiable imaging systems.",
+      "summaries": {
+        "en": "Lenses, freeform surfaces, polarization, coatings and differentiable imaging systems.",
+        "zh-CN": "镜头、自由曲面、偏振、涂层和可微成像系统的设计分析。"
+      },
+      "components": [
+        "optiland"
+      ],
+      "includes": []
+    },
+    {
+      "id": "raysect",
+      "title": "Raysect",
+      "kind": "software",
+      "titles": {
+        "en": "Raysect",
+        "zh-CN": "Raysect"
+      },
+      "summary": "Spectral light transport, optical geometry and synthetic diagnostics.",
+      "summaries": {
+        "en": "Spectral light transport, optical geometry and synthetic diagnostics.",
+        "zh-CN": "复杂场景和光谱辐射输运；支持定制材料、发射和探测模型。"
+      },
+      "components": [
+        "raysect"
+      ],
+      "includes": []
+    },
+    {
+      "id": "raytracing",
+      "title": "DCC-Lab RayTracing",
+      "kind": "software",
+      "titles": {
+        "en": "DCC-Lab RayTracing",
+        "zh-CN": "DCC-Lab RayTracing"
+      },
+      "summary": "Teaching, first-order optical systems, ray bundles and Gaussian-beam propagation.",
+      "summaries": {
+        "en": "Teaching, first-order optical systems, ray bundles and Gaussian-beam propagation.",
+        "zh-CN": "快速搭建显微、望远和光束传输系统的近轴模型。"
+      },
+      "components": [
+        "raytracing"
+      ],
+      "includes": []
+    },
+    {
+      "id": "lightpipes",
+      "title": "LightPipes",
+      "kind": "software",
+      "titles": {
+        "en": "LightPipes",
+        "zh-CN": "LightPipes"
+      },
+      "summary": "Diffraction, interference, apertures and laser-beam propagation.",
+      "summaries": {
+        "en": "Diffraction, interference, apertures and laser-beam propagation.",
+        "zh-CN": "自由空间衍射、透镜、孔径、干涉及相干光束演化。"
+      },
+      "components": [
+        "lightpipes"
+      ],
+      "includes": []
+    },
+    {
+      "id": "poppy",
+      "title": "POPPY",
+      "kind": "software",
+      "titles": {
+        "en": "POPPY",
+        "zh-CN": "POPPY"
+      },
+      "summary": "Fourier and Fresnel propagation through pupils and optical surfaces, especially astronomical imaging.",
+      "summaries": {
+        "en": "Fourier and Fresnel propagation through pupils and optical surfaces, especially astronomical imaging.",
+        "zh-CN": "望远镜、孔径、波前误差和点扩散函数仿真。"
+      },
+      "components": [
+        "poppy"
+      ],
+      "includes": []
+    },
+    {
+      "id": "hcipy",
+      "title": "HCIPy",
+      "kind": "software",
+      "titles": {
+        "en": "HCIPy",
+        "zh-CN": "HCIPy"
+      },
+      "summary": "Wavefront propagation, coronagraphy, turbulence, wavefront sensing and adaptive-optics modeling.",
+      "summaries": {
+        "en": "Wavefront propagation, coronagraphy, turbulence, wavefront sensing and adaptive-optics modeling.",
+        "zh-CN": "日冕仪、波前传感、湍流与 AO 反馈系统联合仿真。"
+      },
+      "components": [
+        "hcipy"
+      ],
+      "includes": []
+    },
+    {
+      "id": "prysm",
+      "title": "prysm",
+      "kind": "software",
+      "titles": {
+        "en": "prysm",
+        "zh-CN": "prysm"
+      },
+      "summary": "PSFs, MTFs, wavefront analysis and optical metrology calculations.",
+      "summaries": {
+        "en": "PSFs, MTFs, wavefront analysis and optical metrology calculations.",
+        "zh-CN": "PSF、MTF、波前与多项式拟合，以及成像系统建模。"
+      },
+      "components": [
+        "prysm"
+      ],
+      "includes": []
+    },
+    {
+      "id": "diffractio",
+      "title": "Diffractio",
+      "kind": "software",
+      "titles": {
+        "en": "Diffractio",
+        "zh-CN": "Diffractio"
+      },
+      "summary": "Diffraction, polarization and free-space propagation with multiple numerical methods.",
+      "summaries": {
+        "en": "Diffraction, polarization and free-space propagation with multiple numerical methods.",
+        "zh-CN": "波前、掩模、偏振以及多种传播算法的仿真。"
+      },
+      "components": [
+        "diffractio"
+      ],
+      "includes": []
+    },
+    {
+      "id": "torchoptics",
+      "title": "TorchOptics",
+      "kind": "software",
+      "titles": {
+        "en": "TorchOptics",
+        "zh-CN": "TorchOptics"
+      },
+      "summary": "Optimize optical fields and systems jointly with numerical or learned reconstruction.",
+      "summaries": {
+        "en": "Optimize optical fields and systems jointly with numerical or learned reconstruction.",
+        "zh-CN": "衍射元件、光学神经网络和光学—数字处理联合优化。"
+      },
+      "components": [
+        "torchoptics"
+      ],
+      "includes": []
+    },
+    {
+      "id": "waveprop",
+      "title": "waveprop",
+      "kind": "software",
+      "titles": {
+        "en": "waveprop",
+        "zh-CN": "waveprop"
+      },
+      "summary": "Fresnel, Fraunhofer and angular-spectrum propagation for imaging and holography experiments.",
+      "summaries": {
+        "en": "Fresnel, Fraunhofer and angular-spectrum propagation for imaging and holography experiments.",
+        "zh-CN": "Fresnel、Fraunhofer、角谱传播及全息相关计算。"
+      },
+      "components": [
+        "waveprop"
+      ],
+      "includes": []
+    },
+    {
+      "id": "gdsfactory",
+      "title": "gdsfactory",
+      "kind": "software",
+      "titles": {
+        "en": "gdsfactory",
+        "zh-CN": "gdsfactory"
+      },
+      "summary": "Build reusable photonic components, routing, layouts and simulation connections.",
+      "summaries": {
+        "en": "Build reusable photonic components, routing, layouts and simulation connections.",
+        "zh-CN": "用代码生成器件、端口、布线、网表和制造版图。"
+      },
+      "components": [
+        "gdsfactory"
+      ],
+      "includes": []
+    },
+    {
+      "id": "klayout",
+      "title": "KLayout",
+      "kind": "software",
+      "titles": {
+        "en": "KLayout",
+        "zh-CN": "KLayout"
+      },
+      "summary": "Inspect and process chip layouts and run geometric / connectivity verification.",
+      "summaries": {
+        "en": "Inspect and process chip layouts and run geometric / connectivity verification.",
+        "zh-CN": "GDS / OASIS 编辑、参数化单元、版图规则与连通性验证。"
+      },
+      "components": [
+        "klayout"
+      ],
+      "includes": []
+    },
+    {
+      "id": "sax",
+      "title": "SAX",
+      "kind": "software",
+      "titles": {
+        "en": "SAX",
+        "zh-CN": "SAX"
+      },
+      "summary": "Compose frequency-dependent scattering models and optimize photonic circuits.",
+      "summaries": {
+        "en": "Compose frequency-dependent scattering models and optimize photonic circuits.",
+        "zh-CN": "以器件散射矩阵组装光子电路，进行快速扫描与优化。"
+      },
+      "components": [
+        "sax"
+      ],
+      "includes": []
+    },
+    {
+      "id": "siepic",
+      "title": "SiEPIC-Tools",
+      "kind": "software",
+      "titles": {
+        "en": "SiEPIC-Tools",
+        "zh-CN": "SiEPIC-Tools"
+      },
+      "summary": "KLayout-based photonic layout, routing, verification and design workflows.",
+      "summaries": {
+        "en": "KLayout-based photonic layout, routing, verification and design workflows.",
+        "zh-CN": "波导、端口、连通性、版图与工艺设计流程。"
+      },
+      "components": [
+        "siepic"
+      ],
+      "includes": []
+    },
+    {
+      "id": "nazca",
+      "title": "Nazca Design",
+      "kind": "software",
+      "titles": {
+        "en": "Nazca Design",
+        "zh-CN": "Nazca Design"
+      },
+      "summary": "Python-defined photonic components, routing and mask layouts.",
+      "summaries": {
+        "en": "Python-defined photonic components, routing and mask layouts.",
+        "zh-CN": "用 Python 表达光子单元、连接与专业掩模版图。"
+      },
+      "components": [
+        "nazca"
+      ],
+      "includes": []
+    },
+    {
+      "id": "adda",
+      "title": "ADDA",
+      "kind": "software",
+      "titles": {
+        "en": "ADDA",
+        "zh-CN": "ADDA"
+      },
+      "summary": "Scattering and absorption by particles with complex shape or material distributions.",
+      "summaries": {
+        "en": "Scattering and absorption by particles with complex shape or material distributions.",
+        "zh-CN": "任意形状粒子的散射、吸收及部分基底附近的电磁问题。"
+      },
+      "components": [
+        "adda"
+      ],
+      "includes": []
+    },
+    {
+      "id": "miepython",
+      "title": "miepython",
+      "kind": "software",
+      "titles": {
+        "en": "miepython",
+        "zh-CN": "miepython"
+      },
+      "summary": "Scattering, absorption and angular patterns of spherical particles.",
+      "summaries": {
+        "en": "Scattering, absorption and angular patterns of spherical particles.",
+        "zh-CN": "球形粒子的散射效率、相函数和相关光学量。"
+      },
+      "components": [
+        "miepython"
+      ],
+      "includes": []
+    },
+    {
+      "id": "treams",
+      "title": "treams",
+      "kind": "software",
+      "titles": {
+        "en": "treams",
+        "zh-CN": "treams"
+      },
+      "summary": "Electromagnetic scattering, translations and periodic arrangements using multipole expansions.",
+      "summaries": {
+        "en": "Electromagnetic scattering, translations and periodic arrangements using multipole expansions.",
+        "zh-CN": "粒子簇、散射基底展开和相关光子结构的电磁计算。"
+      },
+      "components": [
+        "treams"
+      ],
+      "includes": []
+    },
+    {
+      "id": "smuthi",
+      "title": "SMUTHI",
+      "kind": "software",
+      "titles": {
+        "en": "SMUTHI",
+        "zh-CN": "SMUTHI"
+      },
+      "summary": "Scattering by particles interacting with planar layered environments.",
+      "summaries": {
+        "en": "Scattering by particles interacting with planar layered environments.",
+        "zh-CN": "多个粒子位于薄膜系统中或附近时的电磁散射。"
+      },
+      "components": [
+        "smuthi"
+      ],
+      "includes": []
+    },
+    {
+      "id": "pygdm",
+      "title": "pyGDM",
+      "kind": "software",
+      "titles": {
+        "en": "pyGDM",
+        "zh-CN": "pyGDM"
+      },
+      "summary": "Nanophotonic scattering, near fields and inverse-design research.",
+      "summaries": {
+        "en": "Nanophotonic scattering, near fields and inverse-design research.",
+        "zh-CN": "纳米结构近场、散射、发光与部分多物理光学分析。"
+      },
+      "components": [
+        "pygdm"
+      ],
+      "includes": []
+    },
+    {
+      "id": "qutip",
+      "title": "QuTiP",
+      "kind": "software",
+      "titles": {
+        "en": "QuTiP",
+        "zh-CN": "QuTiP"
+      },
+      "summary": "Quantum states, density matrices, master equations, dynamics and quantum-optics observables.",
+      "summaries": {
+        "en": "Quantum states, density matrices, master equations, dynamics and quantum-optics observables.",
+        "zh-CN": "量子光学、腔 QED、耗散动力学、关联函数和控制。"
+      },
+      "components": [
+        "qutip"
+      ],
+      "includes": []
+    },
+    {
+      "id": "quantumoptics",
+      "title": "QuantumOptics.jl",
+      "kind": "software",
+      "titles": {
+        "en": "QuantumOptics.jl",
+        "zh-CN": "QuantumOptics.jl"
+      },
+      "summary": "Quantum operators, states, dissipation and time evolution in Julia.",
+      "summaries": {
+        "en": "Quantum operators, states, dissipation and time evolution in Julia.",
+        "zh-CN": "量子光学与多体小系统的算符、态和开放动力学。"
+      },
+      "components": [
+        "quantumoptics"
+      ],
+      "includes": []
+    },
+    {
+      "id": "perceval",
+      "title": "Perceval",
+      "kind": "software",
+      "titles": {
+        "en": "Perceval",
+        "zh-CN": "Perceval"
+      },
+      "summary": "Linear-optical circuits, photon-counting states and photonic quantum algorithms.",
+      "summaries": {
+        "en": "Linear-optical circuits, photon-counting states and photonic quantum algorithms.",
+        "zh-CN": "单光子源、线性光学器件、Fock 态及测量的电路模拟。"
+      },
+      "components": [
+        "perceval"
+      ],
+      "includes": []
+    },
+    {
+      "id": "strawberry",
+      "title": "Strawberry Fields",
+      "kind": "software",
+      "titles": {
+        "en": "Strawberry Fields",
+        "zh-CN": "Strawberry Fields"
+      },
+      "summary": "Gaussian and non-Gaussian photonic quantum circuits and algorithms.",
+      "summaries": {
+        "en": "Gaussian and non-Gaussian photonic quantum circuits and algorithms.",
+        "zh-CN": "Gaussian / Fock 表示的光子量子电路和连续变量计算。"
+      },
+      "components": [
+        "strawberry"
+      ],
+      "includes": []
+    },
+    {
+      "id": "luna",
+      "title": "Luna.jl",
+      "kind": "software",
+      "titles": {
+        "en": "Luna.jl",
+        "zh-CN": "Luna.jl"
+      },
+      "summary": "Broadband pulse propagation, nonlinear fibers and related ultrafast dynamics.",
+      "summaries": {
+        "en": "Broadband pulse propagation, nonlinear fibers and related ultrafast dynamics.",
+        "zh-CN": "超短脉冲、空芯光纤和非线性光学中的宽带传播。"
+      },
+      "components": [
+        "luna"
+      ],
+      "includes": []
+    },
+    {
+      "id": "pyfmas",
+      "title": "py-fmas",
+      "kind": "software",
+      "titles": {
+        "en": "py-fmas",
+        "zh-CN": "py-fmas"
+      },
+      "summary": "Research on nonlinear pulse propagation in dispersive waveguides.",
+      "summaries": {
+        "en": "Research on nonlinear pulse propagation in dispersive waveguides.",
+        "zh-CN": "宽带脉冲、非线性光纤与超连续谱相关数值研究。"
+      },
+      "components": [
+        "pyfmas"
+      ],
+      "includes": []
+    },
+    {
+      "id": "laserfun",
+      "title": "laserfun",
+      "kind": "software",
+      "titles": {
+        "en": "laserfun",
+        "zh-CN": "laserfun"
+      },
+      "summary": "Numerical pulse evolution and supercontinuum-related modeling.",
+      "summaries": {
+        "en": "Numerical pulse evolution and supercontinuum-related modeling.",
+        "zh-CN": "以脉冲和光纤对象实现非线性脉冲传播与参数研究。"
+      },
+      "components": [
+        "laserfun"
+      ],
+      "includes": []
+    },
+    {
+      "id": "opticomm",
+      "title": "OptiCommPy",
+      "kind": "software",
+      "titles": {
+        "en": "OptiCommPy",
+        "zh-CN": "OptiCommPy"
+      },
+      "summary": "Coherent transmission, channel models, modulation, receivers and digital signal processing.",
+      "summaries": {
+        "en": "Coherent transmission, channel models, modulation, receivers and digital signal processing.",
+        "zh-CN": "从发送比特、器件、线性或非线性传输到相干接收与性能指标。"
+      },
+      "components": [
+        "opticomm"
+      ],
+      "includes": []
+    },
+    {
+      "id": "finesse",
+      "title": "Finesse 3",
+      "kind": "software",
+      "titles": {
+        "en": "Finesse 3",
+        "zh-CN": "Finesse 3"
+      },
+      "summary": "Laser interferometers, cavities, mode mismatch and noise-related optical responses.",
+      "summaries": {
+        "en": "Laser interferometers, cavities, mode mismatch and noise-related optical responses.",
+        "zh-CN": "复杂激光干涉仪、谐振腔、误差信号、噪声与控制相关建模。"
+      },
+      "components": [
+        "finesse"
+      ],
+      "includes": []
+    },
+    {
+      "id": "rezonator",
+      "title": "reZonator 2",
+      "kind": "software",
+      "titles": {
+        "en": "reZonator 2",
+        "zh-CN": "reZonator 2"
+      },
+      "summary": "Resonator stability, Gaussian beams and first-order optical systems.",
+      "summaries": {
+        "en": "Resonator stability, Gaussian beams and first-order optical systems.",
+        "zh-CN": "驻波腔、环形腔、单程光路和光束变换的快速计算。"
+      },
+      "components": [
+        "rezonator"
+      ],
+      "includes": []
+    },
+    {
+      "id": "mcx",
+      "title": "MCX",
+      "kind": "software",
+      "titles": {
+        "en": "MCX",
+        "zh-CN": "MCX"
+      },
+      "summary": "Light propagation, fluence and time-resolved transport in scattering tissue.",
+      "summaries": {
+        "en": "Light propagation, fluence and time-resolved transport in scattering tissue.",
+        "zh-CN": "组织与复杂体素介质内的散射、吸收和时间相关光传播。"
+      },
+      "components": [
+        "mcx"
+      ],
+      "includes": []
+    },
+    {
+      "id": "mmc",
+      "title": "MMC",
+      "kind": "software",
+      "titles": {
+        "en": "MMC",
+        "zh-CN": "MMC"
+      },
+      "summary": "Photon transport through tissue represented by tetrahedral meshes.",
+      "summaries": {
+        "en": "Photon transport through tissue represented by tetrahedral meshes.",
+        "zh-CN": "四面体网格中的组织光传播，处理曲面和异质组织几何。"
+      },
+      "components": [
+        "mmc"
+      ],
+      "includes": []
+    },
+    {
+      "id": "holopy",
+      "title": "HoloPy",
+      "kind": "software",
+      "titles": {
+        "en": "HoloPy",
+        "zh-CN": "HoloPy"
+      },
+      "summary": "Model holograms and infer particle or sample parameters from measured images.",
+      "summaries": {
+        "en": "Model holograms and infer particle or sample parameters from measured images.",
+        "zh-CN": "用光散射模型生成全息图并拟合粒子等物理参数。"
+      },
+      "components": [
+        "holopy"
+      ],
+      "includes": []
+    },
+    {
+      "id": "pydhm",
+      "title": "pyDHM",
+      "kind": "software",
+      "titles": {
+        "en": "pyDHM",
+        "zh-CN": "pyDHM"
+      },
+      "summary": "Numerical reconstruction, propagation, phase shifting and aberration compensation.",
+      "summaries": {
+        "en": "Numerical reconstruction, propagation, phase shifting and aberration compensation.",
+        "zh-CN": "相移、离轴相位补偿、数值传播和复波场恢复。"
+      },
+      "components": [
+        "pydhm"
+      ],
+      "includes": []
+    },
+    {
+      "id": "pynx",
+      "title": "PyNX",
+      "kind": "software",
+      "titles": {
+        "en": "PyNX",
+        "zh-CN": "PyNX"
+      },
+      "summary": "GPU reconstruction and processing of coherent diffraction imaging experiments.",
+      "summaries": {
+        "en": "GPU reconstruction and processing of coherent diffraction imaging experiments.",
+        "zh-CN": "相干衍射和扫描衍射数据的 GPU 重建及晶体散射计算。"
+      },
+      "components": [
+        "pynx"
+      ],
+      "includes": []
+    },
+    {
+      "id": "mitsuba",
+      "title": "Mitsuba 3",
+      "kind": "software",
+      "titles": {
+        "en": "Mitsuba 3",
+        "zh-CN": "Mitsuba 3"
+      },
+      "summary": "Radiometric light transport, inverse rendering and programmable materials / sensors.",
+      "summaries": {
+        "en": "Radiometric light transport, inverse rendering and programmable materials / sensors.",
+        "zh-CN": "光谱、偏振和几何场景的光输运；优化材质、形状与相机参数。"
+      },
+      "components": [
+        "mitsuba"
+      ],
+      "includes": []
+    },
+    {
+      "id": "pbrt",
+      "title": "PBRT v4",
+      "kind": "software",
+      "titles": {
+        "en": "PBRT v4",
+        "zh-CN": "PBRT v4"
+      },
+      "summary": "Research-grade scene rendering with physical light transport, materials and cameras.",
+      "summaries": {
+        "en": "Research-grade scene rendering with physical light transport, materials and cameras.",
+        "zh-CN": "复杂场景、材质、相机与照明的可控图像生成。"
+      },
+      "components": [
+        "pbrt"
+      ],
+      "includes": []
+    },
+    {
+      "id": "srw",
+      "title": "SRW",
+      "kind": "software",
+      "titles": {
+        "en": "SRW",
+        "zh-CN": "SRW"
+      },
+      "summary": "Radiation from synchrotron sources and propagation through X-ray beamlines.",
+      "summaries": {
+        "en": "Radiation from synchrotron sources and propagation through X-ray beamlines.",
+        "zh-CN": "从电子轨迹和辐射源到束线光学的频域场与传播。"
+      },
+      "components": [
+        "srw"
+      ],
+      "includes": []
+    },
+    {
+      "id": "shadow",
+      "title": "SHADOW4 / OASYS",
+      "kind": "software",
+      "titles": {
+        "en": "SHADOW4 / OASYS",
+        "zh-CN": "SHADOW4 / OASYS"
+      },
+      "summary": "Mirrors, crystals, gratings and beam transport in synchrotron beamlines; OASYS supplies graphical workflows.",
+      "summaries": {
+        "en": "Mirrors, crystals, gratings and beam transport in synchrotron beamlines; OASYS supplies graphical workflows.",
+        "zh-CN": "同步辐射束线的镜、晶体、光栅与光束输运；OASYS 提供图形工作流。"
+      },
+      "components": [
+        "shadow"
+      ],
+      "includes": []
+    },
+    {
+      "id": "xrt",
+      "title": "xrt",
+      "kind": "software",
+      "titles": {
+        "en": "xrt",
+        "zh-CN": "xrt"
+      },
+      "summary": "Synchrotron sources, crystals, mirrors and beamline calculations.",
+      "summaries": {
+        "en": "Synchrotron sources, crystals, mirrors and beamline calculations.",
+        "zh-CN": "同步辐射光源、晶体、镜面与束线光学计算。"
+      },
+      "components": [
+        "xrt"
+      ],
+      "includes": []
+    },
+    {
+      "id": "pyvisa",
+      "title": "PyVISA",
+      "kind": "software",
+      "titles": {
+        "en": "PyVISA",
+        "zh-CN": "PyVISA"
+      },
+      "summary": "Control sources, power meters, spectrum analyzers, oscilloscopes and controllers with text commands and read their measurements.",
+      "summaries": {
+        "en": "Control sources, power meters, spectrum analyzers, oscilloscopes and controllers with text commands and read their measurements.",
+        "zh-CN": "用文本指令控制光源、功率计、光谱分析仪、示波器和控制器，并读取测量值。"
+      },
+      "components": [
+        "pyvisa"
+      ],
+      "includes": []
+    },
+    {
+      "id": "pymeasure",
+      "title": "PyMeasure",
+      "kind": "software",
+      "titles": {
+        "en": "PyMeasure",
+        "zh-CN": "PyMeasure"
+      },
+      "summary": "Drivers that expose the settings of many laboratory instruments as properties, and procedures that run a measurement and record its data.",
+      "summaries": {
+        "en": "Drivers that expose the settings of many laboratory instruments as properties, and procedures that run a measurement and record its data.",
+        "zh-CN": "把多种实验仪器的设置封装为属性的驱动，以及执行测量并记录数据的流程。"
+      },
+      "components": [
+        "pymeasure"
+      ],
+      "includes": []
+    },
+    {
+      "id": "pylablib",
+      "title": "pylablib",
+      "kind": "software",
+      "titles": {
+        "en": "pylablib",
+        "zh-CN": "pylablib"
+      },
+      "summary": "Acquire frames from scientific cameras and move stages, with device classes for Andor, Hamamatsu, PCO, Thorlabs, Newport, Attocube and other makers.",
+      "summaries": {
+        "en": "Acquire frames from scientific cameras and move stages, with device classes for Andor, Hamamatsu, PCO, Thorlabs, Newport, Attocube and other makers.",
+        "zh-CN": "采集科学相机图像并驱动位移台，含 Andor、Hamamatsu、PCO、Thorlabs、Newport、Attocube 等厂商的设备类。"
+      },
+      "components": [
+        "pylablib"
+      ],
+      "includes": []
+    },
+    {
+      "id": "qcodes",
+      "title": "QCoDeS",
+      "kind": "software",
+      "titles": {
+        "en": "QCoDeS",
+        "zh-CN": "QCoDeS"
+      },
+      "summary": "Describe instruments as parameters, run measurement loops and store the data with the settings of every instrument.",
+      "summaries": {
+        "en": "Describe instruments as parameters, run measurement loops and store the data with the settings of every instrument.",
+        "zh-CN": "把仪器描述为参数，运行测量循环，并把数据连同各仪器的设置一起保存。"
+      },
+      "components": [
+        "qcodes"
+      ],
+      "includes": []
+    },
+    {
+      "id": "bluesky",
+      "title": "Bluesky / ophyd",
+      "kind": "software",
+      "titles": {
+        "en": "Bluesky / ophyd",
+        "zh-CN": "Bluesky / ophyd"
+      },
+      "summary": "Run scans and adaptive experiments on beamline and laboratory devices; every reading is emitted as a structured document.",
+      "summaries": {
+        "en": "Run scans and adaptive experiments on beamline and laboratory devices; every reading is emitted as a structured document.",
+        "zh-CN": "在束线和实验室设备上运行扫描与自适应实验；每次读数都以结构化文档发出。"
+      },
+      "components": [
+        "bluesky"
+      ],
+      "includes": []
+    },
+    {
+      "id": "micromanager",
+      "title": "Micro-Manager (pymmcore-plus)",
+      "kind": "software",
+      "titles": {
+        "en": "Micro-Manager (pymmcore-plus)",
+        "zh-CN": "Micro-Manager (pymmcore-plus)"
+      },
+      "summary": "Control microscope hardware through the device adapters of Micro-Manager and run multidimensional acquisitions.",
+      "summaries": {
+        "en": "Control microscope hardware through the device adapters of Micro-Manager and run multidimensional acquisitions.",
+        "zh-CN": "通过 Micro-Manager 的设备适配器控制显微镜硬件并执行多维采集。"
+      },
+      "components": [
+        "micromanager"
+      ],
+      "includes": []
+    },
+    {
+      "id": "harvesters",
+      "title": "Harvester (GenICam)",
+      "kind": "software",
+      "titles": {
+        "en": "Harvester (GenICam)",
+        "zh-CN": "Harvester (GenICam)"
+      },
+      "summary": "Acquire frames and set the features of machine-vision cameras through a GenTL producer.",
+      "summaries": {
+        "en": "Acquire frames and set the features of machine-vision cameras through a GenTL producer.",
+        "zh-CN": "通过 GenTL producer 采集机器视觉相机图像并设置相机特性。"
+      },
+      "components": [
+        "harvesters"
+      ],
+      "includes": []
+    },
+    {
+      "id": "nidaqmx",
+      "title": "NI-DAQmx Python",
+      "kind": "software",
+      "titles": {
+        "en": "NI-DAQmx Python",
+        "zh-CN": "NI-DAQmx Python"
+      },
+      "summary": "Read photodiode and detector voltages, generate waveforms and triggers, and count pulses with NI data-acquisition devices.",
+      "summaries": {
+        "en": "Read photodiode and detector voltages, generate waveforms and triggers, and count pulses with NI data-acquisition devices.",
+        "zh-CN": "用 NI 数据采集设备读取光电二极管与探测器电压、产生波形和触发、进行脉冲计数。"
+      },
+      "components": [
+        "nidaqmx"
+      ],
+      "includes": []
+    },
+    {
+      "id": "seabreeze",
+      "title": "python-seabreeze",
+      "kind": "software",
+      "titles": {
+        "en": "python-seabreeze",
+        "zh-CN": "python-seabreeze"
+      },
+      "summary": "Read spectra and set integration time and triggering of Ocean Optics USB spectrometers.",
+      "summaries": {
+        "en": "Read spectra and set integration time and triggering of Ocean Optics USB spectrometers.",
+        "zh-CN": "读取 Ocean Optics USB 光谱仪的光谱，设置积分时间与触发。"
+      },
+      "components": [
+        "seabreeze"
+      ],
+      "includes": []
+    },
+    {
+      "id": "slmsuite",
+      "title": "slmsuite",
+      "kind": "software",
+      "titles": {
+        "en": "slmsuite",
+        "zh-CN": "slmsuite"
+      },
+      "summary": "Compute holograms for spot arrays and patterns, calibrate the wavefront and the mapping between camera and modulator, and drive modulators and cameras.",
+      "summaries": {
+        "en": "Compute holograms for spot arrays and patterns, calibrate the wavefront and the mapping between camera and modulator, and drive modulators and cameras.",
+        "zh-CN": "计算光点阵列与图案的全息图，校准波前及相机与调制器之间的映射，并驱动调制器和相机。"
+      },
+      "components": [
+        "slmsuite"
+      ],
+      "includes": []
+    },
+    {
+      "id": "sympy",
+      "title": "SymPy",
+      "kind": "software",
+      "titles": {
+        "en": "SymPy",
+        "zh-CN": "SymPy"
+      },
+      "summary": "Derive Jones / ABCD matrices, dispersion relations, derivatives, integrals and approximations.",
+      "summaries": {
+        "en": "Derive Jones / ABCD matrices, dispersion relations, derivatives, integrals and approximations.",
+        "zh-CN": "推导 Jones / ABCD 矩阵、色散关系、导数、积分与近似表达式。"
+      },
+      "components": [
+        "sympy"
+      ],
+      "includes": []
+    },
+    {
+      "id": "sage",
+      "title": "SageMath",
+      "kind": "software",
+      "titles": {
+        "en": "SageMath",
+        "zh-CN": "SageMath"
+      },
+      "summary": "Algebra, equations, symbolic and numerical research for more complex theoretical derivations.",
+      "summaries": {
+        "en": "Algebra, equations, symbolic and numerical research for more complex theoretical derivations.",
+        "zh-CN": "代数、方程、符号与数值研究；适合更复杂的理论推导。"
+      },
+      "components": [
+        "sage"
+      ],
+      "includes": []
+    },
+    {
+      "id": "octave",
+      "title": "GNU Octave",
+      "kind": "software",
+      "titles": {
+        "en": "GNU Octave",
+        "zh-CN": "GNU Octave"
+      },
+      "summary": "Runs MATLAB-language optical scripts, signal processing and linear algebra without a MATLAB license.",
+      "summaries": {
+        "en": "Runs MATLAB-language optical scripts, signal processing and linear algebra without a MATLAB license.",
+        "zh-CN": "无需 MATLAB 授权运行 MATLAB 语言的光学脚本、信号处理和线性代数。"
+      },
+      "components": [
+        "octave"
+      ],
+      "includes": []
+    },
+    {
+      "id": "julia",
+      "title": "Julia",
+      "kind": "software",
+      "titles": {
+        "en": "Julia",
+        "zh-CN": "Julia"
+      },
+      "summary": "Runs Julia optics programs and packages such as QuantumOptics.jl and Luna.jl in project environments of their own.",
+      "summaries": {
+        "en": "Runs Julia optics programs and packages such as QuantumOptics.jl and Luna.jl in project environments of their own.",
+        "zh-CN": "运行 Julia 光学程序，以及 QuantumOptics.jl、Luna.jl 等各自独立项目环境中的软件包。"
+      },
+      "components": [
+        "julia"
+      ],
+      "includes": []
+    },
+    {
+      "id": "freecad",
+      "title": "FreeCAD",
+      "kind": "software",
+      "titles": {
+        "en": "FreeCAD",
+        "zh-CN": "FreeCAD"
+      },
+      "summary": "Optomechanical supports, packaging, assemblies and manufacturable geometry for simulation.",
+      "summaries": {
+        "en": "Optomechanical supports, packaging, assemblies and manufacturable geometry for simulation.",
+        "zh-CN": "光机支架、封装、几何装配与可制造结构；为仿真提供几何。"
+      },
+      "components": [
+        "freecad"
+      ],
+      "includes": []
+    },
+    {
+      "id": "gmsh",
+      "title": "Gmsh",
+      "kind": "software",
+      "titles": {
+        "en": "Gmsh",
+        "zh-CN": "Gmsh"
+      },
+      "summary": "Controlled meshes for optical FEM, thermal and structural models.",
+      "summaries": {
+        "en": "Controlled meshes for optical FEM, thermal and structural models.",
+        "zh-CN": "为光学 FEM、热学和结构模型生成可控网格。"
+      },
+      "components": [
+        "gmsh"
+      ],
+      "includes": []
+    },
+    {
+      "id": "scikitimage",
+      "title": "scikit-image",
+      "kind": "software",
+      "titles": {
+        "en": "scikit-image",
+        "zh-CN": "scikit-image"
+      },
+      "summary": "Filter, segment, register, transform and quantify experimental images.",
+      "summaries": {
+        "en": "Filter, segment, register, transform and quantify experimental images.",
+        "zh-CN": "实验图像的滤波、分割、配准、变换和定量分析。"
+      },
+      "components": [
+        "scikitimage"
+      ],
+      "includes": []
+    },
+    {
+      "id": "napari",
+      "title": "napari",
+      "kind": "software",
+      "titles": {
+        "en": "napari",
+        "zh-CN": "napari"
+      },
+      "summary": "Inspect images, volumes, labels and reconstruction results; develop analysis plugins.",
+      "summaries": {
+        "en": "Inspect images, volumes, labels and reconstruction results; develop analysis plugins.",
+        "zh-CN": "观察图像、体数据、标签和实验重建结果；支持开发分析插件。"
+      },
+      "components": [
+        "napari"
+      ],
+      "includes": []
+    },
+    {
+      "id": "refractiveindex",
+      "title": "refractiveindex.info database",
+      "kind": "software",
+      "titles": {
+        "en": "refractiveindex.info database",
+        "zh-CN": "refractiveindex.info database"
+      },
+      "summary": "Refractive index, extinction coefficient and source literature for optical material models.",
+      "summaries": {
+        "en": "Refractive index, extinction coefficient and source literature for optical material models.",
+        "zh-CN": "提供材料折射率、消光系数及其文献来源，支撑各类光学模型。"
+      },
+      "components": [
+        "refractiveindex"
+      ],
+      "includes": []
+    },
+    {
+      "id": "fenics",
+      "title": "FEniCSx / DOLFINx",
+      "kind": "software",
+      "titles": {
+        "en": "FEniCSx / DOLFINx",
+        "zh-CN": "FEniCSx / DOLFINx"
+      },
+      "summary": "Implement Helmholtz, Maxwell and thermal research models using variational formulations.",
+      "summaries": {
+        "en": "Implement Helmholtz, Maxwell and thermal research models using variational formulations.",
+        "zh-CN": "用变分形式实现 Helmholtz、Maxwell、热学等研究模型，适合需要修改方程的场景。"
+      },
+      "components": [
+        "fenics"
+      ],
+      "includes": []
+    },
+    {
+      "id": "ngsolve",
+      "title": "Netgen / NGSolve",
+      "kind": "software",
+      "titles": {
+        "en": "Netgen / NGSolve",
+        "zh-CN": "Netgen / NGSolve"
+      },
+      "summary": "Electromagnetic modes and custom coupled equations, with Netgen meshing.",
+      "summaries": {
+        "en": "Electromagnetic modes and custom coupled equations, with Netgen meshing.",
+        "zh-CN": "电磁模态和自定义耦合方程；Netgen 提供相关网格能力。"
+      },
+      "components": [
+        "ngsolve"
+      ],
+      "includes": []
+    },
+    {
+      "id": "scipy",
+      "title": "NumPy / SciPy",
+      "kind": "software",
+      "titles": {
+        "en": "NumPy / SciPy",
+        "zh-CN": "NumPy / SciPy"
+      },
+      "summary": "Optical data processing, fitting, ODEs, FFTs, optimization and statistics underpin many specialized libraries.",
+      "summaries": {
+        "en": "Optical data processing, fitting, ODEs, FFTs, optimization and statistics underpin many specialized libraries.",
+        "zh-CN": "承载光学数据处理、参数拟合、ODE、FFT、优化与统计，是多种专业库的底层。"
+      },
+      "components": [
+        "scipy"
+      ],
+      "includes": []
+    },
+    {
+      "id": "jax",
+      "title": "JAX",
+      "kind": "software",
+      "titles": {
+        "en": "JAX",
+        "zh-CN": "JAX"
+      },
+      "summary": "Develop differentiable optical solvers, optimizers and surrogates; used by FDTDX and SAX.",
+      "summaries": {
+        "en": "Develop differentiable optical solvers, optimizers and surrogates; used by FDTDX and SAX.",
+        "zh-CN": "开发可微光学求解器、优化器和代理模型；FDTDX、SAX 等建立在其上。"
+      },
+      "components": [
+        "jax"
+      ],
+      "includes": []
+    },
+    {
+      "id": "pytorch",
+      "title": "PyTorch",
+      "kind": "software",
+      "titles": {
+        "en": "PyTorch",
+        "zh-CN": "PyTorch"
+      },
+      "summary": "Develop joint optics-algorithm models, inverse networks and fast surrogates; used by torcwa and TorchOptics.",
+      "summaries": {
+        "en": "Develop joint optics-algorithm models, inverse networks and fast surrogates; used by torcwa and TorchOptics.",
+        "zh-CN": "开发光学—算法联合模型、反演网络与快速代理；torcwa、TorchOptics 等使用其后端。"
+      },
+      "components": [
+        "pytorch"
+      ],
+      "includes": []
+    },
+    {
+      "id": "py-pol",
+      "title": "py-pol",
+      "kind": "software",
+      "titles": {
+        "en": "py-pol",
+        "zh-CN": "py-pol"
+      },
+      "summary": "Polarization states and optical elements using Jones vectors, Stokes vectors, Jones matrices and Mueller matrices.",
+      "summaries": {
+        "en": "Polarization states and optical elements using Jones vectors, Stokes vectors, Jones matrices and Mueller matrices.",
+        "zh-CN": "使用 Jones 向量、Stokes 向量、Jones 矩阵与 Mueller 矩阵计算偏振态及光学元件。"
+      },
+      "components": [
+        "py-pol"
+      ],
+      "includes": []
+    }
+  ],
+  "components": [
+    {
+      "id": "opticstudio",
+      "title": "Ansys Zemax OpticStudio",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://optics.ansys.com/hc/en-us/articles/42661773562899-Sample-code-for-ZOS-API-users"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://optics.ansys.com/hc/en-us/articles/42661790380179-ZOS-API-NET-An-Overview"
+        }
+      ]
+    },
+    {
+      "id": "codev",
+      "title": "Keysight CODE V",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "Official product / platform",
+          "url": "https://www.keysight.com.cn/cn/zh/products/software/optical-solutions-software/optical-design-solutions/codev.html"
+        }
+      ]
+    },
+    {
+      "id": "lighttools",
+      "title": "Keysight LightTools",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "Official product / platform",
+          "url": "https://www.keysight.com/es/en/products/software/optical-solutions-software/optical-design-solutions/lighttools.html"
+        },
+        {
+          "label": "Community integration",
+          "url": "https://github.com/Mestas/Lighttools"
+        }
+      ]
+    },
+    {
+      "id": "fred",
+      "title": "FRED",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; conditional university gratis licenses require application",
+      "sources": [
+        {
+          "label": "Scripting / programming reference",
+          "url": "https://support.photonengr.com/article/176-raytrace-and-analysis-loop"
+        },
+        {
+          "label": "Official product / platform",
+          "url": "https://photonengr.com/"
+        },
+        {
+          "label": "Free / paid feature boundaries",
+          "url": "https://photonengr.com/academic-licenses"
+        }
+      ]
+    },
+    {
+      "id": "tracepro",
+      "title": "TracePro",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "Official manual",
+          "url": "https://lambdares.com/hubfs/TracePro_Users_Manual_2026.pdf"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://lambdares.com/tracepro-2"
+        }
+      ]
+    },
+    {
+      "id": "oslo",
+      "title": "OSLO",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "Official product / platform",
+          "url": "https://lambdares.com/oslo"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://lambdares.com/edu"
+        },
+        {
+          "label": "Scripting / programming reference",
+          "url": "https://lambdares.com/hubfs/Support/support/oslo/oslo_releases/OSLOProgramReference.pdf"
+        }
+      ]
+    },
+    {
+      "id": "asap",
+      "title": "ASAP",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "Scripting / programming reference",
+          "url": "https://breault.com/asap/"
+        }
+      ]
+    },
+    {
+      "id": "virtuallab",
+      "title": "VirtualLab Fusion",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://programmingreference.lighttrans.com/2026.2/api/VirtualLab.Programming.html"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://www.lighttrans.com/product/virtuallab-fusion/frequently-asked-questions/general-faqs.html"
+        }
+      ]
+    },
+    {
+      "id": "speos",
+      "title": "Ansys Speos",
+      "kind": "python",
+      "requirements": [
+        "ansys-speos-core==0.10.0"
+      ],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "Official documentation / website",
+          "url": "https://optics.ansys.com/hc/en-us/articles/24752772596371-Optical-Automation-library-introduction"
+        },
+        {
+          "label": "Source repository",
+          "url": "https://github.com/ansys/optical-automation"
+        }
+      ]
+    },
+    {
+      "id": "lumerical",
+      "title": "Ansys Lumerical",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "Python interface",
+          "url": "https://optics.ansys.com/hc/en-us/articles/360037824513-Python-API-overview"
+        },
+        {
+          "label": "MCP implementation / documentation",
+          "url": "https://github.com/ansys/pylumerical-mcp"
+        }
+      ]
+    },
+    {
+      "id": "comsol",
+      "title": "COMSOL Multiphysics",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://www.comsol.com/support/learning-center/article/overview-of-the-comsol-api-107912"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://www.comsol.com/livelink-for-matlab"
+        },
+        {
+          "label": "MCP implementation / documentation",
+          "url": "https://github.com/Ching-Chiang/comsol-mcp"
+        }
+      ]
+    },
+    {
+      "id": "cst",
+      "title": "CST Studio Suite",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "Python interface",
+          "url": "https://www.3ds.com/products/simulia/cst-studio-suite"
+        },
+        {
+          "label": "Python interface",
+          "url": "https://blog.3ds.com/brands/simulia/cst-studio-suite-release-2021x-highlights/"
+        }
+      ]
+    },
+    {
+      "id": "rsoft",
+      "title": "Keysight RSoft Photonic Device Tools",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://www.keysight.com/zz/en/products/software/optical-solutions-software/photonic-design-solutions.html"
+        }
+      ]
+    },
+    {
+      "id": "jcm",
+      "title": "JCMsuite",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://www.jcmwave.com/jcmsuite/interface/"
+        },
+        {
+          "label": "Python interface",
+          "url": "https://docs.jcmwave.com/JCMsuite/html/PythonInterface/bf647454e36069fd16f1a7a35cf6a865.html"
+        }
+      ]
+    },
+    {
+      "id": "photond",
+      "title": "Photon Design FIMMWAVE / FIMMPROP",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "Scripting / programming reference",
+          "url": "https://photond.com/fimmwave/features/scripting-optimisation"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://photond.com/fimmwave/options/feature-option-table"
+        }
+      ]
+    },
+    {
+      "id": "tidy3d",
+      "title": "Flexcompute Tidy3D",
+      "kind": "python",
+      "requirements": [
+        "tidy3d==2.12.2"
+      ],
+      "license": "Client: LGPL-2.1; cloud solving uses FlexCredits / commercial plans",
+      "sources": [
+        {
+          "label": "Free / paid feature boundaries",
+          "url": "https://docs.flexcompute.com/projects/tidy3d/en/stable/faq/docs/faq/How-is-using-Tidy3D-billed.html"
+        },
+        {
+          "label": "Python interface",
+          "url": "https://github.com/flexcompute/tidy3d"
+        },
+        {
+          "label": "Agent plugins / Skills",
+          "url": "https://github.com/flexcompute/plugin-marketplace"
+        }
+      ]
+    },
+    {
+      "id": "ipkiss",
+      "title": "Luceda IPKISS",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "Official product / platform",
+          "url": "https://www.lucedaphotonics.com/luceda-photonics-design-platform"
+        },
+        {
+          "label": "API / project documentation",
+          "url": "https://academy.lucedaphotonics.com/tutorials/device_sim/"
+        }
+      ]
+    },
+    {
+      "id": "vpi",
+      "title": "VPIphotonics Design Suite",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://www.vpiphotonics.com/Tools/DesignSuite/Features/"
+        },
+        {
+          "label": "Official product / platform",
+          "url": "https://www.vpiphotonics.com/Tools/DesignSuite/"
+        }
+      ]
+    },
+    {
+      "id": "optisystem",
+      "title": "Optiwave OptiSystem",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "Python interface",
+          "url": "https://optiwave.com/forums/topic/co-simulation-using-python/"
+        },
+        {
+          "label": "Official manual",
+          "url": "https://cdn.optiwave.com/wp-content/uploads/2017/11/OptiSystem_15_New_Features.pdf"
+        }
+      ]
+    },
+    {
+      "id": "macleod",
+      "title": "Essential Macleod",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; Function and other extensions depend on the configuration",
+      "sources": [
+        {
+          "label": "Official product / platform",
+          "url": "https://www.thinfilmcenter.com/essential.php"
+        },
+        {
+          "label": "Scripting / programming reference",
+          "url": "https://www.thinfilmcenter.com/function.php"
+        }
+      ]
+    },
+    {
+      "id": "optilayer",
+      "title": "OptiLayer / OptiRE / OptiChar",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; academic terms, modules and concurrent execution depend on the contract",
+      "sources": [
+        {
+          "label": "Official documentation / website",
+          "url": "https://optilayer.com/com-automation/"
+        },
+        {
+          "label": "Python interface",
+          "url": "https://optilayer.com/development-history/new-features-in-optilayer-2018-version-12-83/"
+        },
+        {
+          "label": "Official product / platform",
+          "url": "https://optilayer.com/downloads/"
+        }
+      ]
+    },
+    {
+      "id": "rpfiber",
+      "title": "RP Fiber Power",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://www.rp-photonics.com/rp_fiber_power_interface.html"
+        },
+        {
+          "label": "Scripting / programming reference",
+          "url": "https://www.rp-photonics.com/software_script_language.html"
+        }
+      ]
+    },
+    {
+      "id": "rpresonator",
+      "title": "RP Resonator / RP ProPulse",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; the two products are licensed separately",
+      "sources": [
+        {
+          "label": "Official product / platform",
+          "url": "https://www.rp-photonics.com/software_overview.html"
+        },
+        {
+          "label": "Scripting / programming reference",
+          "url": "https://www.rp-photonics.com/rp_propulse_interface.html"
+        }
+      ]
+    },
+    {
+      "id": "crosslight",
+      "title": "Crosslight APSYS / PICS3D",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; configured by TCAD module",
+      "sources": [
+        {
+          "label": "Official product / platform",
+          "url": "https://crosslight.com/"
+        }
+      ]
+    },
+    {
+      "id": "synopsys-osd",
+      "title": "SYNOPSYS Lens Design(OSD)",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; official trial has time and surface-count limits",
+      "sources": [
+        {
+          "label": "Official documentation / website",
+          "url": "https://osdoptics.com/accessinstallation/"
+        },
+        {
+          "label": "Scripting / programming reference",
+          "url": "https://osdoptics.com/wp-content/uploads/2024/09/SYNOPSYSTM-Lens-Design-Software-Starting-Guide-Ui-Plus.pdf"
+        }
+      ]
+    },
+    {
+      "id": "tfcalc",
+      "title": "TFCalc",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial; currently operated by Hulinks",
+      "sources": [
+        {
+          "label": "Official documentation / website",
+          "url": "https://www.sspectra.com/"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://www.hulinks.co.jp/en/"
+        }
+      ]
+    },
+    {
+      "id": "matlab",
+      "title": "MATLAB / Simulink",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial / academic; toolboxes licensed separately",
+      "sources": [
+        {
+          "label": "MCP implementation / documentation",
+          "url": "https://github.com/matlab/matlab-mcp-server"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://www.mathworks.com/help/cloudcenter/ug/run-matlab-with-ai-agentic-and-ai-assistant-applications.html"
+        }
+      ]
+    },
+    {
+      "id": "mathematica",
+      "title": "Wolfram Mathematica",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial Mathematica; local MCP requires an appropriately licensed kernel",
+      "sources": [
+        {
+          "label": "MCP implementation / documentation",
+          "url": "https://www.wolfram.com/ai/mcp/"
+        },
+        {
+          "label": "MCP implementation / documentation",
+          "url": "https://www.wolfram.com/artificial-intelligence/mcp/local/wolfram-mcp-local/"
+        },
+        {
+          "label": "Maintainer repository",
+          "url": "https://github.com/WolframResearch/AgentTools"
+        }
+      ]
+    },
+    {
+      "id": "maple",
+      "title": "Maple",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial / academic",
+      "sources": [
+        {
+          "label": "Python interface",
+          "url": "https://jp.maplesoft.com/support/help/maple/view.aspx?path=OpenMaple%2FPython%2FAPI"
+        },
+        {
+          "label": "Official manual",
+          "url": "https://www.maplesoft.com/documentation_center/maple2024/ProgrammingGuide.pdf"
+        }
+      ]
+    },
+    {
+      "id": "labview",
+      "title": "NI LabVIEW",
+      "kind": "external",
+      "requirements": [],
+      "license": "Commercial / academic subscription",
+      "sources": [
+        {
+          "label": "Official documentation / website",
+          "url": "https://www.ni.com/docs/en-US/bundle/labview/page/using-activex-with-labview.html"
+        },
+        {
+          "label": "Scripting / programming reference",
+          "url": "https://www.ni.com/docs/en-IO/bundle/labview-api-ref/page/properties-and-methods/activex/application/getvireference.html"
+        }
+      ]
+    },
+    {
+      "id": "photonforge",
+      "title": "PhotonForge Community",
+      "kind": "external",
+      "requirements": [],
+      "license": "Community local features are free, including commercial use; this does not establish an open-source platform; cloud device solves are paid",
+      "sources": [
+        {
+          "label": "Free / paid feature boundaries",
+          "url": "https://docs.flexcompute.com/projects/photonforge/en/latest/getting_started.html"
+        },
+        {
+          "label": "Agent plugins / Skills",
+          "url": "https://github.com/flexcompute/plugin-marketplace"
+        }
+      ]
+    },
+    {
+      "id": "osloedu",
+      "title": "OSLO EDU",
+      "kind": "external",
+      "requirements": [],
+      "license": "Free proprietary educational edition; limited features; no course enrollment required according to the vendor",
+      "sources": [
+        {
+          "label": "Free / paid feature boundaries",
+          "url": "https://lambdares.com/edu"
+        }
+      ]
+    },
+    {
+      "id": "ptypy",
+      "title": "PtyPy",
+      "kind": "python",
+      "requirements": [
+        "ptypy @ git+https://github.com/ptycho/ptypy@3e20c916ae78ef84c1654437d80e8f4b5586ed1a"
+      ],
+      "license": "Academic License: academic and noncommercial use only; source-available, with field-of-use restrictions",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/ptycho/ptypy"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/ptycho/ptypy/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "meep",
+      "title": "Meep",
+      "kind": "environment",
+      "requirements": [],
+      "license": "GPL-2.0 family",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/NanoComp/meep"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/NanoComp/meep/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "mpb",
+      "title": "MPB",
+      "kind": "environment",
+      "requirements": [],
+      "license": "GPL-2.0 family",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/NanoComp/mpb"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/NanoComp/mpb/HEAD/COPYING"
+        }
+      ]
+    },
+    {
+      "id": "fdtdx",
+      "title": "FDTDX",
+      "kind": "python",
+      "requirements": [
+        "fdtdx==0.6.3"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/ymahlau/fdtdx"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/ymahlau/fdtdx/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "openems",
+      "title": "openEMS",
+      "kind": "external",
+      "requirements": [],
+      "license": "GPL-3.0",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/thliebig/openEMS"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/thliebig/openEMS/HEAD/COPYING"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "S⁴ / S4",
+      "kind": "external",
+      "requirements": [],
+      "license": "GPL-2.0 family",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/victorliu/S4"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/victorliu/S4/HEAD/COPYING"
+        }
+      ]
+    },
+    {
+      "id": "torcwa",
+      "title": "torcwa",
+      "kind": "python",
+      "requirements": [
+        "torcwa==0.1.4.2",
+        "torch==2.15.0"
+      ],
+      "license": "LGPL-3.0",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/kch3782/torcwa"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/kch3782/torcwa/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "grcwa",
+      "title": "grcwa",
+      "kind": "python",
+      "requirements": [
+        "grcwa==0.1.2"
+      ],
+      "license": "GPL-3.0",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/weiliangjinca/grcwa"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/weiliangjinca/grcwa/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "legume",
+      "title": "legume",
+      "kind": "python",
+      "requirements": [
+        "legume-gme==1.0.3"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/fancompute/legume"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/fancompute/legume/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "ceviche",
+      "title": "Ceviche",
+      "kind": "python",
+      "requirements": [
+        "ceviche==0.1.3"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/fancompute/ceviche"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/fancompute/ceviche/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "tmm",
+      "title": "tmm",
+      "kind": "python",
+      "requirements": [
+        "tmm==0.2.0",
+        "numpy"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/sbyrnes321/tmm"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/sbyrnes321/tmm/HEAD/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "id": "solcore",
+      "title": "Solcore",
+      "kind": "python",
+      "requirements": [
+        "solcore==5.10.0",
+        "numpy<2.4"
+      ],
+      "license": "LGPL-3.0 family",
+      "sources": [
+        {
+          "label": "Maintainer repository",
+          "url": "https://github.com/qpv-research-group/solcore5"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://docs.solcore.solar/en/latest/Optics/optics.html"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/qpv-research-group/solcore5/HEAD/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "id": "rayoptics",
+      "title": "RayOptics",
+      "kind": "python",
+      "requirements": [
+        "rayoptics==0.9.10"
+      ],
+      "license": "BSD-3-Clause",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/mjhoptics/ray-optics"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/mjhoptics/ray-optics/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "optiland",
+      "title": "Optiland",
+      "kind": "python",
+      "requirements": [
+        "optiland==0.6.3"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/optiland/optiland"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/optiland/optiland/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "raysect",
+      "title": "Raysect",
+      "kind": "python",
+      "requirements": [
+        "raysect==0.9.1"
+      ],
+      "license": "BSD-3-Clause",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/raysect/source"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/raysect/source/HEAD/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "id": "raytracing",
+      "title": "DCC-Lab RayTracing",
+      "kind": "python",
+      "requirements": [
+        "raytracing==1.4.7"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/DCC-Lab/RayTracing"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/DCC-Lab/RayTracing/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "lightpipes",
+      "title": "LightPipes",
+      "kind": "python",
+      "requirements": [
+        "LightPipes==2.1.5"
+      ],
+      "license": "BSD-3-Clause",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/opticspy/lightpipes"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/opticspy/lightpipes/HEAD/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "id": "poppy",
+      "title": "POPPY",
+      "kind": "python",
+      "requirements": [
+        "poppy==1.2.0"
+      ],
+      "license": "BSD-3-Clause",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/spacetelescope/poppy"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/spacetelescope/poppy/HEAD/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "id": "hcipy",
+      "title": "HCIPy",
+      "kind": "python",
+      "requirements": [
+        "hcipy==0.7.1"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/ehpor/hcipy"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/ehpor/hcipy/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "prysm",
+      "title": "prysm",
+      "kind": "python",
+      "requirements": [
+        "prysm==0.21.1",
+        "setuptools<81"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/brandondube/prysm"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/brandondube/prysm/HEAD/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "id": "diffractio",
+      "title": "Diffractio",
+      "kind": "python",
+      "requirements": [
+        "diffractio==1.0.0"
+      ],
+      "license": "GPL-3.0",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/optbrea/diffractio"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/optbrea/diffractio/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "torchoptics",
+      "title": "TorchOptics",
+      "kind": "python",
+      "requirements": [
+        "torchoptics==1.0.2",
+        "torch==2.15.0"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/MatthewFilipovich/torchoptics"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/MatthewFilipovich/torchoptics/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "waveprop",
+      "title": "waveprop",
+      "kind": "python",
+      "requirements": [
+        "waveprop==0.0.12",
+        "torch==2.15.0"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/ebezzam/waveprop"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/ebezzam/waveprop/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "gdsfactory",
+      "title": "gdsfactory",
+      "kind": "python",
+      "requirements": [
+        "gdsfactory==9.51.0"
+      ],
+      "license": "MIT core; commercial services, external PDKs and solvers licensed separately",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/gdsfactory/gdsfactory"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/gdsfactory/gdsfactory/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "klayout",
+      "title": "KLayout",
+      "kind": "python",
+      "requirements": [
+        "klayout==0.30.13"
+      ],
+      "license": "GPL-3.0",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/KLayout/klayout"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/KLayout/klayout/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "sax",
+      "title": "SAX",
+      "kind": "python",
+      "requirements": [
+        "sax==0.18.2"
+      ],
+      "license": "Apache-2.0",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/flaport/sax"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/flaport/sax/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "siepic",
+      "title": "SiEPIC-Tools",
+      "kind": "python",
+      "requirements": [
+        "SiEPIC==0.5.31"
+      ],
+      "license": "MIT; PDKs licensed separately",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/SiEPIC/SiEPIC-Tools"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/SiEPIC/SiEPIC-Tools/HEAD/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "id": "nazca",
+      "title": "Nazca Design",
+      "kind": "external",
+      "requirements": [],
+      "license": "AGPL-3.0-or-later; commercial services and PDKs are separate",
+      "sources": [
+        {
+          "label": "License / usage terms",
+          "url": "https://nazca-design.org/about/"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://nazca-design.org/manual/introduction.html"
+        }
+      ]
+    },
+    {
+      "id": "adda",
+      "title": "ADDA",
+      "kind": "external",
+      "requirements": [],
+      "license": "GPL-3.0",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/adda-team/adda"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/adda-team/adda/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "miepython",
+      "title": "miepython",
+      "kind": "python",
+      "requirements": [
+        "miepython==3.3.1"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/scottprahl/miepython"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/scottprahl/miepython/HEAD/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "id": "treams",
+      "title": "treams",
+      "kind": "python",
+      "requirements": [
+        "treams==0.4.7",
+        "numpy<2; sys_platform == 'win32'"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/tfp-photonics/treams"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/tfp-photonics/treams/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "smuthi",
+      "title": "SMUTHI",
+      "kind": "external",
+      "requirements": [],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "License / usage terms",
+          "url": "https://smuthi.readthedocs.io/en/latest/_source/01%20about/about_smuthi.html"
+        },
+        {
+          "label": "Maintainer repository",
+          "url": "https://github.com/KMCzajkowski/smuthi"
+        }
+      ]
+    },
+    {
+      "id": "pygdm",
+      "title": "pyGDM",
+      "kind": "python",
+      "requirements": [
+        "pyGDM2==1.1.12",
+        "six"
+      ],
+      "license": "GPL-3.0 family",
+      "sources": [
+        {
+          "label": "Methods publication",
+          "url": "https://wiechapeter.gitlab.io/"
+        },
+        {
+          "label": "API / project documentation",
+          "url": "https://homepages.laas.fr/pwiecha/pygdm_doc/apidoc.html"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://gitlab.com/wiechapeter/pyGDM2"
+        }
+      ]
+    },
+    {
+      "id": "qutip",
+      "title": "QuTiP",
+      "kind": "python",
+      "requirements": [
+        "qutip==5.3.1"
+      ],
+      "license": "BSD-3-Clause",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/qutip/qutip"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/qutip/qutip/HEAD/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "id": "quantumoptics",
+      "title": "QuantumOptics.jl",
+      "kind": "environment",
+      "requirements": [],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/qojulia/QuantumOptics.jl"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/qojulia/QuantumOptics.jl/HEAD/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "id": "perceval",
+      "title": "Perceval",
+      "kind": "python",
+      "requirements": [
+        "perceval-quandela==1.3.1",
+        "drawsvg<2.4.1"
+      ],
+      "license": "MIT local software; remote services have separate terms",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/Quandela/Perceval"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/Quandela/Perceval/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "strawberry",
+      "title": "Strawberry Fields",
+      "kind": "python",
+      "requirements": [
+        "strawberryfields==0.23.0",
+        "setuptools<81",
+        "scipy<1.14"
+      ],
+      "license": "Apache-2.0",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/XanaduAI/strawberryfields"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/XanaduAI/strawberryfields/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "luna",
+      "title": "Luna.jl",
+      "kind": "environment",
+      "requirements": [],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/LupoLab/Luna.jl"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/LupoLab/Luna.jl/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "pyfmas",
+      "title": "py-fmas",
+      "kind": "python",
+      "requirements": [
+        "py-fmas @ git+https://github.com/omelchert/py-fmas@241d942fe0cd6a49001b1bf110dd32bccc86bb16"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/omelchert/py-fmas"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/omelchert/py-fmas/HEAD/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "id": "laserfun",
+      "title": "laserfun",
+      "kind": "python",
+      "requirements": [
+        "laserfun @ git+https://github.com/laserfun/laserfun@641afa4e71a0ec8caeaeef54bd687e4ca6ecab5a",
+        "numpy",
+        "scipy",
+        "matplotlib"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/laserfun/laserfun"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/laserfun/laserfun/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "opticomm",
+      "title": "OptiCommPy",
+      "kind": "python",
+      "requirements": [
+        "OptiCommPy==0.11.0"
+      ],
+      "license": "GPL-3.0",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/edsonportosilva/OptiCommPy"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/edsonportosilva/OptiCommPy/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "finesse",
+      "title": "Finesse 3",
+      "kind": "python",
+      "requirements": [
+        "finesse==3.0.2",
+        "ipython"
+      ],
+      "license": "GPL-3.0 family",
+      "sources": [
+        {
+          "label": "Official documentation / website",
+          "url": "https://finesse.ifosim.org/docs/latest/"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://finesse.docs.ligo.org/finesse-ligo/index.html"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://git.ligo.org/finesse/finesse3"
+        }
+      ]
+    },
+    {
+      "id": "rezonator",
+      "title": "reZonator 2",
+      "kind": "external",
+      "requirements": [],
+      "license": "GPL-3.0",
+      "sources": [
+        {
+          "label": "Maintainer repository",
+          "url": "https://github.com/orion-project/rezonator2"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/orion-project/rezonator2/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "mcx",
+      "title": "MCX",
+      "kind": "python",
+      "requirements": [
+        "pmcx==0.8.1",
+        "numpy"
+      ],
+      "license": "GPL-3.0",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/fangq/mcx"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/fangq/mcx/HEAD/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "id": "mmc",
+      "title": "MMC",
+      "kind": "python",
+      "requirements": [
+        "pmmc==0.6.0",
+        "numpy"
+      ],
+      "license": "GPL-3.0",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/fangq/mmc"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/fangq/mmc/HEAD/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "id": "holopy",
+      "title": "HoloPy",
+      "kind": "environment",
+      "requirements": [],
+      "license": "GPL-3.0",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/manoharan-lab/holopy"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/manoharan-lab/holopy/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "pydhm",
+      "title": "pyDHM",
+      "kind": "python",
+      "requirements": [
+        "pyDHM==1.0.5"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "Maintainer repository",
+          "url": "https://github.com/catrujilla/pyDHM"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://catrujilla.github.io/pyDHM/"
+        },
+        {
+          "label": "Methods publication",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0275818"
+        }
+      ]
+    },
+    {
+      "id": "pynx",
+      "title": "PyNX",
+      "kind": "external",
+      "requirements": [],
+      "license": "CeCILL-B",
+      "sources": [
+        {
+          "label": "License / usage terms",
+          "url": "https://pynx.esrf.fr/en/stable/"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://pynx.esrf.fr/en/stable/scripts/"
+        }
+      ]
+    },
+    {
+      "id": "mitsuba",
+      "title": "Mitsuba 3",
+      "kind": "python",
+      "requirements": [
+        "mitsuba==3.9.1"
+      ],
+      "license": "BSD-3-Clause",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/mitsuba-renderer/mitsuba3"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/mitsuba-renderer/mitsuba3/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "pbrt",
+      "title": "PBRT v4",
+      "kind": "external",
+      "requirements": [],
+      "license": "Apache-2.0",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/mmp/pbrt-v4"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/mmp/pbrt-v4/HEAD/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "id": "srw",
+      "title": "SRW",
+      "kind": "python",
+      "requirements": [
+        "srwpy==4.2.1"
+      ],
+      "license": "BSD-3-Clause; Python execution does not require IGOR Pro",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/ochubar/SRW"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://pypi.org/project/oasys-srwpy/1.0.3/"
+        }
+      ]
+    },
+    {
+      "id": "shadow",
+      "title": "SHADOW4 / OASYS",
+      "kind": "python",
+      "requirements": [
+        "shadow4==0.2.1"
+      ],
+      "license": "SHADOW4: MIT; OASYS and plugins have their own licenses",
+      "sources": [
+        {
+          "label": "Maintainer repository",
+          "url": "https://github.com/oasys-kit/shadow4"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://github.com/oasys-kit/shadow4/blob/master/LICENSE"
+        },
+        {
+          "label": "Maintainer repository",
+          "url": "https://github.com/oasys-kit/OASYS1-shadow4"
+        }
+      ]
+    },
+    {
+      "id": "xrt",
+      "title": "xrt",
+      "kind": "python",
+      "requirements": [
+        "xrt==1.6.2"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/kklmn/xrt"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/kklmn/xrt/HEAD/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "id": "pyvisa",
+      "title": "PyVISA",
+      "kind": "python",
+      "requirements": [
+        "pyvisa==1.16.2",
+        "pyvisa-py==0.8.1",
+        "pyvisa-sim==0.7.1",
+        "pyserial",
+        "pyusb",
+        "numpy"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/pyvisa/pyvisa"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/pyvisa/pyvisa/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "pymeasure",
+      "title": "PyMeasure",
+      "kind": "python",
+      "requirements": [
+        "pymeasure==0.16.0"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/pymeasure/pymeasure"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/pymeasure/pymeasure/HEAD/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "id": "pylablib",
+      "title": "pylablib",
+      "kind": "python",
+      "requirements": [
+        "pylablib-lightweight[devio]==1.4.3"
+      ],
+      "license": "GPL-3.0",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/AlexShkarin/pyLabLib"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/AlexShkarin/pyLabLib/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "qcodes",
+      "title": "QCoDeS",
+      "kind": "python",
+      "requirements": [
+        "qcodes==0.63.0"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/microsoft/Qcodes"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/microsoft/Qcodes/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "bluesky",
+      "title": "Bluesky / ophyd",
+      "kind": "python",
+      "requirements": [
+        "bluesky==1.16.0",
+        "ophyd==1.11.2",
+        "scipy"
+      ],
+      "license": "BSD-3-Clause",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/bluesky/bluesky"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/bluesky/bluesky/HEAD/LICENSE"
+        },
+        {
+          "label": "Maintainer repository",
+          "url": "https://github.com/bluesky/ophyd"
+        }
+      ]
+    },
+    {
+      "id": "micromanager",
+      "title": "Micro-Manager (pymmcore-plus)",
+      "kind": "python",
+      "requirements": [
+        "pymmcore-plus==0.18.1"
+      ],
+      "license": "BSD-3-Clause (pymmcore-plus); MMCore is LGPL; device adapters carry their own licenses",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/pymmcore-plus/pymmcore-plus"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/pymmcore-plus/pymmcore-plus/HEAD/LICENSE"
+        },
+        {
+          "label": "Maintainer repository",
+          "url": "https://github.com/micro-manager/micro-manager"
+        }
+      ]
+    },
+    {
+      "id": "harvesters",
+      "title": "Harvester (GenICam)",
+      "kind": "python",
+      "requirements": [
+        "harvesters==1.4.3"
+      ],
+      "license": "Apache-2.0",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/genicam/harvesters"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/genicam/harvesters/HEAD/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "id": "nidaqmx",
+      "title": "NI-DAQmx Python",
+      "kind": "python",
+      "requirements": [
+        "nidaqmx==1.7.0"
+      ],
+      "license": "MIT; the NI-DAQmx driver is NI software",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/ni/nidaqmx-python"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/ni/nidaqmx-python/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "seabreeze",
+      "title": "python-seabreeze",
+      "kind": "python",
+      "requirements": [
+        "seabreeze==2.11.0",
+        "numpy"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/ap--/python-seabreeze"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/ap--/python-seabreeze/HEAD/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "id": "slmsuite",
+      "title": "slmsuite",
+      "kind": "python",
+      "requirements": [
+        "slmsuite==0.5.0"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/holodyne/slmsuite"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/holodyne/slmsuite/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "sympy",
+      "title": "SymPy",
+      "kind": "python",
+      "requirements": [
+        "sympy==1.14.0"
+      ],
+      "license": "BSD-3-Clause",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/sympy/sympy"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/sympy/sympy/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "sage",
+      "title": "SageMath",
+      "kind": "external",
+      "requirements": [],
+      "license": "GPL family; bundled components retain their respective licenses",
+      "sources": [
+        {
+          "label": "Official documentation / website",
+          "url": "https://www.sagemath.org/"
+        }
+      ]
+    },
+    {
+      "id": "octave",
+      "title": "GNU Octave",
+      "kind": "environment",
+      "requirements": [],
+      "license": "GPL-3.0-or-later",
+      "sources": [
+        {
+          "label": "Official documentation / website",
+          "url": "https://octave.org/"
+        },
+        {
+          "label": "Release notes",
+          "url": "https://octave.org/NEWS-7.html"
+        }
+      ]
+    },
+    {
+      "id": "julia",
+      "title": "Julia",
+      "kind": "environment",
+      "requirements": [],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "Official documentation / website",
+          "url": "https://julialang.org/"
+        },
+        {
+          "label": "Command line",
+          "url": "https://docs.julialang.org/en/v1/manual/command-line-interface/"
+        }
+      ]
+    },
+    {
+      "id": "freecad",
+      "title": "FreeCAD",
+      "kind": "external",
+      "requirements": [],
+      "license": "LGPL-2.1 family; components may have additional licenses",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/FreeCAD/FreeCAD"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/FreeCAD/FreeCAD/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "gmsh",
+      "title": "Gmsh",
+      "kind": "environment",
+      "requirements": [],
+      "license": "GPL; commercial relicensing available separately",
+      "sources": [
+        {
+          "label": "License / usage terms",
+          "url": "https://gmsh.info/"
+        },
+        {
+          "label": "Official manual",
+          "url": "https://gmsh.info/doc/texinfo/"
+        }
+      ]
+    },
+    {
+      "id": "scikitimage",
+      "title": "scikit-image",
+      "kind": "python",
+      "requirements": [
+        "scikit-image==0.26.0"
+      ],
+      "license": "Primarily BSD-3-Clause; see the license inventory for individual files",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/scikit-image/scikit-image"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/scikit-image/scikit-image/HEAD/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "id": "napari",
+      "title": "napari",
+      "kind": "python",
+      "requirements": [
+        "napari==0.10.0"
+      ],
+      "license": "BSD-3-Clause",
+      "sources": [
+        {
+          "label": "API / project documentation",
+          "url": "https://github.com/napari/napari"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/napari/napari/HEAD/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "refractiveindex",
+      "title": "refractiveindex.info database",
+      "kind": "external",
+      "requirements": [],
+      "license": "CC0 database; source publications retain their own rights",
+      "sources": [
+        {
+          "label": "Maintainer repository",
+          "url": "https://github.com/polyanskiy/refractiveindex.info-database"
+        },
+        {
+          "label": "License / usage terms",
+          "url": "https://raw.githubusercontent.com/polyanskiy/refractiveindex.info-database/HEAD/LICENSE"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://refractiveindex.info/"
+        }
+      ]
+    },
+    {
+      "id": "fenics",
+      "title": "FEniCSx / DOLFINx",
+      "kind": "environment",
+      "requirements": [],
+      "license": "DOLFINx: LGPL-3.0-or-later; components licensed separately",
+      "sources": [
+        {
+          "label": "Maintainer repository",
+          "url": "https://github.com/FEniCS/dolfinx"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://fenicsproject.org/"
+        }
+      ]
+    },
+    {
+      "id": "ngsolve",
+      "title": "Netgen / NGSolve",
+      "kind": "python",
+      "requirements": [
+        "ngsolve==6.2.2608",
+        "scipy"
+      ],
+      "license": "LGPL-2.1; consult individual component licenses",
+      "sources": [
+        {
+          "label": "Maintainer repository",
+          "url": "https://github.com/NGSolve/ngsolve"
+        },
+        {
+          "label": "Maxwell tutorial",
+          "url": "https://ngsolve.org/ngsolve/docs/i-tutorials/unit-2.4-Maxwell/Maxwellevp.html"
+        }
+      ]
+    },
+    {
+      "id": "scipy",
+      "title": "NumPy / SciPy",
+      "kind": "python",
+      "requirements": [
+        "scipy"
+      ],
+      "license": "BSD family; dependencies and components retain their own licenses",
+      "sources": [
+        {
+          "label": "Official documentation / website",
+          "url": "https://numpy.org/"
+        },
+        {
+          "label": "Official documentation / website",
+          "url": "https://scipy.org/"
+        }
+      ]
+    },
+    {
+      "id": "jax",
+      "title": "JAX",
+      "kind": "python",
+      "requirements": [
+        "jax==0.12.0.1"
+      ],
+      "license": "Apache-2.0",
+      "sources": [
+        {
+          "label": "Official documentation / website",
+          "url": "https://docs.jax.dev/en/latest/"
+        },
+        {
+          "label": "Source repository",
+          "url": "https://github.com/jax-ml/jax"
+        }
+      ]
+    },
+    {
+      "id": "pytorch",
+      "title": "PyTorch",
+      "kind": "python",
+      "requirements": [
+        "torch==2.15.0"
+      ],
+      "license": "BSD family; see the license inventory for third-party components",
+      "sources": [
+        {
+          "label": "Official product / platform",
+          "url": "https://pytorch.org/"
+        },
+        {
+          "label": "Source repository",
+          "url": "https://github.com/pytorch/pytorch"
+        }
+      ]
+    },
+    {
+      "id": "py-pol",
+      "title": "py-pol",
+      "kind": "python",
+      "requirements": [
+        "py-pol==1.3.0"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "label": "Documentation",
+          "url": "https://py-pol.readthedocs.io/en/master/"
+        },
+        {
+          "label": "Source and license",
+          "url": "https://github.com/JesusDelHoyo/py_pol"
+        }
+      ]
+    }
+  ]
+}

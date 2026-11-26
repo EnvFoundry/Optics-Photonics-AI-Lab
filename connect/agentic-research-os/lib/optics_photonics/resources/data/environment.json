@@ -29,16 +29,18 @@
       "titles": {
         "en": "Choose an optical research task",
         "zh-CN": "选择光学研究任务"
-      }
+      },
+      "repository_path": "skills/optical-research/SKILL.md"
     },
     {
       "kind": "catalogue",
-      "package_path": "lib/optics_photonics/resources/data",
+      "package_path": "lib/optics_photonics/resources/data/environment-catalogue.json",
       "title": "Software catalogue and recipes",
       "titles": {
         "en": "Software catalogue and recipes",
         "zh-CN": "软件目录与安装配方"
-      }
+      },
+      "repository_path": "data/environment-catalogue.json"
     },
     {
       "kind": "examples",
@@ -47,7 +49,8 @@
       "titles": {
         "en": "Editable research programs",
         "zh-CN": "可编辑的研究程序"
-      }
+      },
+      "repository_path": "src/optics_photonics/programs"
     },
     {
       "kind": "skills",
@@ -56,7 +59,8 @@
       "titles": {
         "en": "Domain resources and methods",
         "zh-CN": "领域资料与研究方法"
-      }
+      },
+      "repository_path": "skills/optical-research"
     },
     {
       "kind": "skills",
@@ -65,7 +69,8 @@
       "titles": {
         "en": "Computing methods and examples",
         "zh-CN": "计算方法与示例说明"
-      }
+      },
+      "repository_path": "skills/optical-computation"
     },
     {
       "kind": "configuration",
@@ -74,7 +79,15 @@
       "titles": {
         "en": "MCP / Plugin",
         "zh-CN": "MCP 与插件配置"
-      }
+      },
+      "repository_path": "connect/agentic-research-os/plugin.json"
     }
-  ]
+  ],
+  "preparation": {
+    "server": "optics",
+    "installed": "environment_installed",
+    "plan": "environment_plan",
+    "prepare": "environment_prepare",
+    "remove": "environment_remove"
+  }
 }

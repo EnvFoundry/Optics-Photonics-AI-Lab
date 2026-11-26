@@ -324,7 +324,7 @@ def reuse(request_id, payload, path=None):
     return {'run_id': row['run_id'], 'request_id': request_id}
 
 
-def submit(steps, name='Optical research', request_id=None, run_id=None, path=None, _environments=None, _payload=None):
+def submit(steps, name='Optical research', request_id=None, run_id=None, path=None, _environments=None, _payload=None, _allow_empty=False):
     key = request_id or str(uuid.uuid4())
     # A retried request is recognized by its payload: the steps, or the call that produced them.
     payload = encoded(_payload if _payload is not None else {'steps':steps,'name':name,'run_id':run_id})
@@ -341,7 +341,7 @@ def submit(steps, name='Optical research', request_id=None, run_id=None, path=No
             if existing and existing['cancel']: raise ValueError('Resume the cancelled run before appending steps')
             known = {r[0] for r in db.execute('SELECT id FROM steps WHERE run_id=?', (result_id,))}
             from . import programs
-            checked = [programs.snapshot(step) for step in validate(steps, known)]
+            checked = [] if _allow_empty and steps == [] else [programs.snapshot(step) for step in validate(steps, known)]
             if _environments is None:
                 checked, _environments = provisioned(checked, known, path)
             capacity = db.execute("SELECT value FROM settings WHERE key='cpu'").fetchone()[0]
@@ -358,8 +358,10 @@ def submit(steps, name='Optical research', request_id=None, run_id=None, path=No
                         raise ValueError('Configure sufficient capacity for resource: '+resource)
                 prepared.append((result_id,spec['id'],encoded(spec),encoded(environment),'queued'))
             if not existing:
-                db.execute('INSERT INTO runs(id,name,state,created) VALUES(?,?,?,?)', (result_id,name,'queued',time.time()))
-            else:
+                now = time.time()
+                db.execute('INSERT INTO runs(id,name,state,created,finished) VALUES(?,?,?,?,?)',
+                           (result_id,name,'queued' if prepared else 'succeeded',now,None if prepared else now))
+            elif prepared:
                 db.execute("UPDATE runs SET state=CASE WHEN state='running' THEN state ELSE 'queued' END,finished=NULL WHERE id=?", (result_id,))
             db.executemany('INSERT INTO steps(run_id,id,specification,environment,state) VALUES(?,?,?,?,?)', prepared)
             db.execute('INSERT INTO requests VALUES(?,?,?)', (key,payload,result_id))

@@ -9,3 +9,26 @@
 **Prompts and guides.** A host that shows MCP prompts lists six starting points: `calculate`, `study`, `reproduce`, `connect`, `measure`, `continue`. The guides are also MCP resources, `optics://guides/TOPIC`.
 
 **Updates.** Install a new version into a new directory. Configuration, scientific environments and research records stay under `OPTICS_HOME` (default `~/.optics-photonics`) and are used by the new version.
+
+## Selecting software before preparation
+
+Research OS packages publish `data/environment-catalogue.json`: one field, its
+research directions, software modules and shared components. Hosts read this
+metadata before installation and use the exact operation names declared in
+`environment.preparation`.
+
+`environment_plan(selections)` reports reuse, automatic installation or a manual
+connection with its reason. `environment_prepare(selections)` prepares the chosen
+software through the existing background run owner. `environment_installed` returns
+configured modules and `ready_modules` separately; pending manual connections do
+not count as ready. Commercial licensing and physical apparatus remain explicit.
+
+A host may augment preparation with MCP `task: {}`, then call `tasks/get`,
+`tasks/result` and `tasks/cancel`. Completed work survives reconnects and
+cancellation. Failed tasks keep their partial results. Plain calls return the
+existing `run_id`; use `run_status` and `cancel_run` for those calls. The CLI offers
+`plan`, `prepare-modules` and `installed`; TypeScript uses `planSoftware`,
+`prepareSoftware` and `installedSoftware`. Software stays under `OPTICS_HOME`;
+existing bindings and calculation files are unchanged.
+
+`environment_remove(selections)` uninstalls selected managed software when it is no longer shared or referenced by research. Active work retains its connection; external installations, saved results and referenced environments remain. The result lists removed modules and retained paths with reasons. CLI: `optics-photonics uninstall TOOL...`; TypeScript: `uninstallSoftware(selections)`.

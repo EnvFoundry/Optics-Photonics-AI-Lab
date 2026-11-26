@@ -60,13 +60,24 @@ def main(argv=None):
     runs=commands.add_parser('runs'); runs.add_argument('--state'); runs.add_argument('--offset',type=int,default=0); runs.add_argument('--limit',type=int,default=20)
     runs.add_argument('--search'); runs.add_argument('--tool'); runs.add_argument('--before')
     commands.add_parser('mcp')
+    commands.add_parser('installed')
+    for name in ('plan', 'prepare-modules', 'uninstall'):
+        item = commands.add_parser(name)
+        item.add_argument('selections', nargs='*')
+        if name == 'prepare-modules':
+            item.add_argument('--python')
+            item.add_argument('--package', dest='packages', action='append')
+            item.add_argument('--request-id')
     commands.add_parser('tools')
     call=commands.add_parser('call'); call.add_argument('tool'); call.add_argument('arguments',type=object_argument)
     from .packages import HOSTS
     connect=commands.add_parser('connect'); connect.add_argument('host',choices=HOSTS); connect.add_argument('--output',required=True); connect.add_argument('--python'); connect.add_argument('--managed-python',dest='managed',action='store_true',help='Use uv to select Python on the destination machine (Codex, Claude, portable)')
     a=vars(parser.parse_args(argv)); command=a.pop('command')
     try:
-        if command == 'search': result=catalogue.search(**a)
+        if command in ('installed', 'plan', 'prepare-modules', 'uninstall'):
+            from . import composition
+            result = getattr(composition, {'prepare-modules': 'prepare', 'uninstall': 'remove'}.get(command, command))(**a)
+        elif command == 'search': result=catalogue.search(**a)
         elif command == 'materials':
             from . import materials
             if a['wavelength'] and len(a['wavelength']) == 1: a['wavelength'] = a['wavelength'][0]

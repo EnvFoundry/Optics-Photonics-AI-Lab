@@ -1,15 +1,11 @@
-# Optics-Photonics-AI-Lab 0.11.1
+# Optics & Photonics 0.11.2
 
-Research OS packages include publisher-authored English and Chinese descriptions and portable resource locations for the software catalogue, installation recipes, research programs, domain methods, Skills and plugin configuration. Hosts resolve each resource beneath the actual installed package, including after relocation.
+Hosts can browse the software catalogue by direction before installation, then prepare selected modules through the existing durable run owner. MCP preparation supports task status, reconnect, result retrieval and cancellation; CLI and TypeScript expose the same preparation operations.
 
-The tracked Research OS package and release archives are generated from the same declaration. Python, TypeScript, native executors and host launchers share version 0.11.1. Manifest-reading checks use explicit UTF-8 on Windows, macOS and Linux.
-
-Scientific solver preparation continues through existing recipes and environment bindings. Importing this connector does not install every solver or change a running experiment's environment.
+Installed status distinguishes configured connections from ready software. Manual or licensed connections stay pending with their connection instructions. Preparation results retain completed software when another selection cannot be prepared. Selected-module uninstall removes unused managed software while retaining shared installations, frozen research environments, active connections and saved results. Existing environment paths, scientific programs and running research bindings are preserved.
 
 ## 中文
 
-Research OS 包新增发布方维护的中英文说明，明确软件目录、安装配方、研究程序、领域方法、Skills 和插件配置的包内位置。宿主根据实际安装路径解析资源，移动安装目录后仍可使用。
+宿主可在安装前按方向浏览软件目录，选中模块后直接安装。准备过程复用已有的持久任务机制，支持查询进度、重新连接、读取结果和取消；CLI 与 TypeScript 使用相同的准备接口。
 
-仓库内的 Research OS 包与发行压缩包由同一声明生成，Python、TypeScript、原生执行器与宿主启动入口统一为 0.11.1。读取声明的检查在各平台明确采用 UTF-8。
-
-科学软件继续通过已有配方和环境绑定按需准备；导入连接包不会自动安装全部求解器，也不会改变正在运行实验的环境。
+已配置的连接与已可用的软件分别显示。需手动连接或授权的软件保留明确的待连接状态；部分失败不会抹去已完成的安装。按模块卸载会清理不再使用的托管软件，保留共享安装、研究引用的环境、运行中的连接与已有成果。原环境路径、科研程序与运行中的研究绑定保持原样。

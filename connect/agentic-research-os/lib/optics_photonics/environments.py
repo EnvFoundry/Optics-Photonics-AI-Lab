@@ -4,7 +4,7 @@ import hashlib
 import json
 import platform
 import re
-from contextlib import contextmanager
+from contextlib import contextmanager, ExitStack
 import time
 import os
 from pathlib import Path
@@ -31,7 +31,7 @@ def editing(path=None):
 
 
 @contextmanager
-def locked(file):
+def locked(file, blocking=True):
     """Hold an exclusive lock on a file, across processes and on every system."""
     with Path(file).open('a+b') as stream:
         # Both systems can lock an empty file; do not write before owning it.
@@ -43,12 +43,12 @@ def locked(file):
                     msvcrt.locking(stream.fileno(), msvcrt.LK_NBLCK, 1)
                     break
                 except OSError as error:
-                    if error.errno != errno.EACCES:
+                    if not blocking or error.errno != errno.EACCES:
                         raise
                     time.sleep(.02)
         else:
             import fcntl
-            fcntl.flock(stream, fcntl.LOCK_EX)
+            fcntl.flock(stream, fcntl.LOCK_EX | (0 if blocking else fcntl.LOCK_NB))
         try:
             yield
         finally:
@@ -59,6 +59,8 @@ def locked(file):
 
 
 def read(path=None):
+    if not (home(path) / 'connections.json').exists():
+        return {'tools': {}}
     # Windows file replacement cannot overlap a reader's open file handle.
     with editing(path):
         return _read(path)
@@ -93,6 +95,73 @@ def _save(value, path=None):
         os.replace(temporary, directory / 'connections.json')
     finally:
         Path(temporary).unlink(missing_ok=True)
+
+
+def binding_paths(binding):
+    values = [binding.get(key) for key in ('python', 'executable', 'project')]
+    values += binding.get('paths') or []
+    values += (binding.get('command') or [])[:1]
+    return {Path(value).expanduser().absolute() for value in values if isinstance(value, str) and value}
+
+
+def uninstall(tools, path=None):
+    from . import jobs
+    if not isinstance(tools, list) or any(not isinstance(name, str) for name in tools):
+        raise ValueError('selections must contain software IDs')
+    if not tools or not (home(path) / 'connections.json').exists():
+        return {'removed': [], 'files': [], 'retained': []}
+    removed, files, retained, reasons = [], [], set(), []
+    folder = home(path) / 'environments'
+    with jobs.database(path) as db, ExitStack() as locks:
+        db.execute('BEGIN IMMEDIATE')
+        initial = read(path)['tools']
+        names = set(tools) & initial.keys()
+        prefixes = {}
+        busy = set()
+        for name in names:
+            managed = initial[name].get('managed')
+            if isinstance(managed, str) and managed not in {'.', '..'} and Path(managed).name == managed:
+                prefix = folder / managed
+                if prefix.is_dir() and not prefix.is_symlink() and prefix.resolve().parent == folder.resolve():
+                    prefixes[name] = prefix
+        for prefix in sorted(set(prefixes.values())):
+            try:
+                locks.enter_context(locked(folder / (prefix.name + '.lock'), blocking=False))
+            except OSError as error:
+                if error.errno not in {errno.EACCES, errno.EAGAIN}:
+                    raise
+                busy.add(prefix)
+        rows = list(db.execute('SELECT specification,environment,state FROM steps'))
+        active = {json.loads(row['specification'])['tool'] for row in rows if row['state'] in {'queued', 'running'}}
+        frozen = set().union(*(binding_paths(json.loads(row['environment'])) for row in rows)) if rows else set()
+        with editing(path):
+            config = _read(path)
+            removable = {name for name in names if config['tools'].get(name) == initial[name]
+                         and name not in active and prefixes.get(name) not in busy}
+            for name in sorted(names):
+                binding = config['tools'].get(name)
+                prefix = prefixes.get(name)
+                if binding != initial[name] or name in active or prefix in busy:
+                    reason = 'Connection changed' if binding != initial[name] else 'Used by active work'
+                    retained.update(map(str, binding_paths(binding or initial[name])))
+                    reasons.append({'component': name, 'reason': reason})
+                    continue
+                other = [value for key, value in config['tools'].items() if key not in removable]
+                shared = any(prefix and (value.get('managed') == prefix.name or
+                             any(item.is_relative_to(prefix) for item in binding_paths(value))) for value in other)
+                referenced = prefix and any(item.is_relative_to(prefix) for item in frozen)
+                if prefix and not shared and not referenced:
+                    if prefix.exists():
+                        shutil.rmtree(prefix)
+                    files.append(str(prefix))
+                else:
+                    retained.update([str(prefix)] if prefix else map(str, binding_paths(binding)))
+                    reasons.append({'component': name, 'reason': 'Shared installation' if shared else
+                                    'Retained research environment' if referenced else 'External installation'})
+                del config['tools'][name]
+                removed.append(name)
+            _save(config, path)
+    return {'removed': removed, 'files': sorted(set(files)), 'retained': sorted(retained), 'reasons': reasons}
 
 
 def register(tool, name, description, *, kind='python', modules=None, distributions=None, sources=None,

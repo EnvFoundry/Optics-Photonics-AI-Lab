@@ -111,6 +111,10 @@ export class OpticsLab {
   integrations(refresh=false) {return this.call<IntegrationPage>('software_integrations',{refresh});}
   integrationGuide(integration:string,topic:string,language:'en'|'zh'='en') {return this.call<{integration:string;topic:string;language:string;text:string}>('software_integrations',{integration,topic,language});}
   environments(options:Record<string,unknown>={}) {return this.call('environments',options);}
+  installedSoftware() {return this.call('environment_installed');}
+  uninstallSoftware(selections:string[]) {return this.call('environment_remove',{selections});}
+  planSoftware(selections:string[]) {return this.call('environment_plan',{selections});}
+  prepareSoftware(selections:string[],options:{python?:string;packages?:string[];request_id?:string}={}) {return this.call<Submission>('environment_prepare',{selections,...options});}
   resources(cpu?:number,pools?:Record<string,number>) {return this.call('compute_resources',{...(cpu===undefined?{}:{cpu}),...(pools===undefined?{}:{pools})});}
   submit(steps:Step[],options:{name?:string;request_id?:string;run_id?:string}={}) {return this.call<Submission>('submit_workflow',{steps,...options});}
   /** Installed software of every route (executables, session SDKs, modules inside installations, Windows automation servers, service credentials), each with its binding arguments. */

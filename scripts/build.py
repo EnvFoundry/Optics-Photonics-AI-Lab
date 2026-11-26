@@ -77,6 +77,8 @@ def write_domain_programs():
 
 
 def main():
+    from optics_photonics.composition import catalogue_view
+    write_json(ROOT / 'data/environment-catalogue.json', catalogue_view())
     write_routes()
     write_domain_programs()
     subprocess.run([sys.executable,str(ROOT/"scripts/build_connect.py")],check=True)

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "optics-photonics"
-version = "0.11.1"
+version = "0.11.2"
 description = "Independent optical research environment: solvers, native programs, agent tools and episode sampling"
 requires-python = ">=3.10"
 license = "MIT"

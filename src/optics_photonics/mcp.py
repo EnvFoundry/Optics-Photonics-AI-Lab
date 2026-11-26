@@ -7,7 +7,7 @@ import sys
 import textwrap
 import threading
 from . import __version__, catalogue, data, environments
-from . import jobs, languages, signals
+from . import jobs, languages, signals, composition
 
 
 def schema(properties=None, required=None):
@@ -225,22 +225,30 @@ TOOLS = [
         can restore CHECKPOINT state; built-in optimization and grouped sweeps reuse saved evaluations. Read the error
         and progress first; read_guide continuation explains the program contract.''',
          {'run_id': STRING}, ['run_id']),
+    tool('environment_installed', 'Read installed software.'),
+    tool('environment_plan', 'Resolve selected dependencies.',
+         {'selections': STRINGS}, ['selections']),
+    tool('environment_prepare', 'Install selected software.',
+         {'selections': STRINGS, 'python': STRING, 'packages': STRINGS, 'request_id': STRING}, ['selections']),
+    tool('environment_remove', 'Uninstall selected software.',
+         {'selections': STRINGS}, ['selections']),
 ]
 
 
 # Hints describe possible effects, not permission to execute. run_status can restart a queued worker;
 # submissions and resumes run user programs, while bindings and resource settings replace configuration.
-READ_ONLY = {'read_guide', 'software_search', 'software_details', 'materials', 'registered_software', 'software_integrations', 'environments',
+READ_ONLY = {'environment_installed', 'environment_plan', 'read_guide', 'software_search', 'software_details', 'materials', 'registered_software', 'software_integrations', 'environments',
              'discover_native_software', 'result_files', 'read_result', 'read_array', 'list_runs'}
-EXECUTING = {'prepare_environment', 'submit_calculation', 'submit_workflow', 'sample_episodes', 'resume_run', 'run_status'}
+EXECUTING = {'environment_prepare', 'prepare_environment', 'submit_calculation', 'submit_workflow', 'sample_episodes', 'resume_run', 'run_status'}
 SETTINGS = {'compute_resources', 'bind_environment', 'bind_native_software', 'register_software'}
-DESTRUCTIVE = EXECUTING | SETTINGS | {'cancel_run', 'sweep_results'}
+DESTRUCTIVE = EXECUTING | SETTINGS | {'cancel_run', 'sweep_results', 'environment_remove'}
 OPEN_WORLD = EXECUTING | {'materials'}
 
 
 def listed():
     """The tools as tools/list sends them."""
     return [{'name': name, 'description': description, 'inputSchema': spec,
+             **({'execution': {'taskSupport': 'optional'}} if name == 'environment_prepare' else {}),
              'annotations': {'readOnlyHint': name in READ_ONLY, 'destructiveHint': name in DESTRUCTIVE,
                              'idempotentHint': name in READ_ONLY or name in SETTINGS or name == 'cancel_run',
                              'openWorldHint': name in OPEN_WORLD}}
@@ -330,6 +338,10 @@ def prompt(name, values):
 
 
 def invoke(name, args, cancellation=None):
+    if name == 'environment_installed': return composition.installed()
+    if name == 'environment_plan': return composition.plan(**args)
+    if name == 'environment_prepare': return composition.prepare(**args)
+    if name == 'environment_remove': return composition.remove(**args)
     if name == 'read_guide': return guide(args['topic'])
     if name == 'software_search': return catalogue.search(**args)
     if name == 'materials':
@@ -415,17 +427,18 @@ class Connection:
             cancellation = self.active[key(request_id)] = signals.Cancellation()
             return cancellation
 
-    def call(self, request_id, params, cancellation):
+    def call(self, request_id, params, cancellation, method='tools/call'):
         try:
             with self.state:
                 if key(request_id) in self.withdrawn: return
-            result = tool_result(params, cancellation)
+            result = (composition.task_rpc(method, params['taskId'], cancellation)
+                      if method.startswith('tasks/') else tool_result(params, cancellation))
             with self.state:
                 withdrawn = key(request_id) in self.withdrawn
             if not withdrawn:
                 self.send({'jsonrpc':'2.0','id':request_id,'result':result})
         except Exception as error:
-            self.send({'jsonrpc':'2.0','id':request_id,'error':{'code':-32603,'message':str(error)}})
+            self.send({'jsonrpc':'2.0','id':request_id,'error':{'code':-32602 if isinstance(error, ValueError) else -32603,'message':str(error)}})
         finally:
             with self.state:
                 self.active.pop(key(request_id), None); self.withdrawn.discard(key(request_id))
@@ -516,7 +529,11 @@ def tool_result(params, cancellation=None):
         name = params['name']; args = params.get('arguments') or {}
         spec = next((s for n,d,s in TOOLS if n == name), None)
         if spec is None: raise ValueError('Unknown tool: '+name+'. Tools: '+', '.join(n for n,d,s in TOOLS))
+        if 'task' in params and name != 'environment_prepare':
+            raise ValueError('This tool does not support tasks')
         value = invoke(name, arguments(name, args, spec), cancellation)
+        if 'task' in params:
+            return {'task': composition.task(value['run_id'], starting=True)}
         if isinstance(value, str):  # Markdown guidance is returned as written
             return {'content':[{'type':'text','text':value}], 'structuredContent':{'text':value}, 'isError':False}
         picture = value.pop('_image', None) if isinstance(value, dict) else None
@@ -533,7 +550,8 @@ def respond(method, params):
         proposed = params.get('protocolVersion')
         return {'protocolVersion':proposed if proposed in SUPPORTED else '2025-11-25',
                 'serverInfo':{'name':'optics-photonics','version':__version__},
-                'capabilities':{'tools':{'listChanged':False},'resources':{},'prompts':{}},
+                'capabilities':{'tools':{'listChanged':False},'resources':{},'prompts':{},
+                                'tasks': {'requests': {'tools': {'call': {}}}, 'cancel': {}}},
                 'instructions':INSTRUCTIONS}
     if method == 'ping': return {}
     if method == 'tools/list':
@@ -597,6 +615,10 @@ def serve(input_stream=None, output_stream=None):
                     if method == 'tools/call':
                         lane = waits if waiting(params) else pool
                         lane.submit(connection.call, id, params, connection.accept(id))
+                        continue
+                    if method in {'tasks/get', 'tasks/result', 'tasks/cancel'}:
+                        lane = pool if method == 'tasks/get' else waits
+                        lane.submit(connection.call, id, params, connection.accept(id), method)
                         continue
                     result = respond(method, params)
                     if result is None:
