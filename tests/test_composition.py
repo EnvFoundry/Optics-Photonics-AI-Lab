@@ -60,9 +60,13 @@ class CompositionTests(unittest.TestCase):
                 self.assertFalse(Path(command[0]).exists())
                 retry = composition.prepare(['fixture-wheel'], request_id='install-again')['run_id']
                 composition.task_rpc('tasks/result', retry)
+                release = Path(tmp) / 'continue-calculation'
                 research = jobs.submit([{'id': 'square', 'tool': 'fixture-wheel',
-                                         'source': 'import time\ntime.sleep(0.5)\nfrom optics_fixture import square\nRESULT={"square": square(7)}'}])['run_id']
+                                         'source': 'import time\nfrom pathlib import Path\n'
+                                         f'while not Path({str(release)!r}).exists(): time.sleep(0.01)\n'
+                                         'from optics_fixture import square\nRESULT={"square": square(7)}'}])['run_id']
                 active = composition.remove(['fixture-wheel'])
+                release.touch()
                 self.assertEqual(active['removed'], [])
                 self.assertIn('fixture-wheel', environments.read()['tools'])
                 deadline = time.monotonic() + 15
@@ -78,7 +82,7 @@ class CompositionTests(unittest.TestCase):
 
     def test_uninstall_shared_and_external_connections(self):
         with workspace() as tmp, patch.dict(os.environ, {'OPTICS_HOME': tmp}):
-            prefix = Path(tmp) / 'environments/shared'
+            prefix = environments.home() / 'environments/shared'
             prefix.mkdir(parents=True)
             executable = prefix / 'solver'
             executable.write_text('owned solver')
