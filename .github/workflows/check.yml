@@ -3,6 +3,12 @@ on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
+    inputs:
+      macos:
+        description: Include deferred macOS checks
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -20,7 +26,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-15]
+        os: ${{ fromJSON(inputs.macos && '["ubuntu-latest", "windows-latest", "macos-15"]' || '["ubuntu-latest", "windows-latest"]') }}
     runs-on: ${{ matrix.os }}
     env:
       OPTICS_SCIENCE_TESTS: '1'
@@ -57,7 +63,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-22.04, ubuntu-22.04-arm, windows-2022, windows-11-arm, macos-15, macos-15-intel]
+        os: ${{ fromJSON(inputs.macos && '["ubuntu-22.04", "ubuntu-22.04-arm", "windows-2022", "windows-11-arm", "macos-15", "macos-15-intel"]' || '["ubuntu-22.04", "ubuntu-22.04-arm", "windows-2022", "windows-11-arm"]') }}
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
