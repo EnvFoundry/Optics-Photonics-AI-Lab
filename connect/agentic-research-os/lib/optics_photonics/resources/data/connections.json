@@ -24,7 +24,7 @@
     },
     "execution": "local-or-background",
     "environment": "Use the software’s supported OS, architecture, dependencies and license. The connector does not change solver platform support.",
-    "installation_note": "Use discover and bind-native for the installed SDK. Each task owns a session and saves its working project under its output directory. Adapter lifecycle checks use SDK doubles; licensed solver execution remains workstation-dependent.",
+    "installation_note": "The vendor SDK, a supported platform and a valid solver license are required.",
     "session_adapter": "opticstudio"
   },
   "codev": {
@@ -366,7 +366,7 @@
     },
     "execution": "local-or-background",
     "environment": "Use the software’s supported OS, architecture, dependencies and license. The connector does not change solver platform support.",
-    "installation_note": "Use discover and bind-native for the installed SDK. Each task owns a session and saves its working project under its output directory. Adapter lifecycle checks use SDK doubles; licensed solver execution remains workstation-dependent.",
+    "installation_note": "The vendor SDK, a supported platform and a valid solver license are required.",
     "session_adapter": "lumerical",
     "routes": [
       {
@@ -432,7 +432,7 @@
     "execution": "local-or-background",
     "environment": "Use the software’s supported OS, architecture, dependencies and license. The connector does not change solver platform support.",
     "session_adapter": "comsol",
-    "installation_note": "Use discover and bind-native for the installed SDK. Each task owns a session and saves its working project under its output directory. Adapter lifecycle checks use SDK doubles; licensed solver execution remains workstation-dependent.",
+    "installation_note": "The vendor SDK, a supported platform and a valid solver license are required.",
     "routes": [
       {
         "route": "executable",
@@ -492,7 +492,7 @@
     "execution": "local-or-background",
     "environment": "Use the software’s supported OS, architecture, dependencies and license. The connector does not change solver platform support.",
     "session_adapter": "cst",
-    "installation_note": "Use discover and bind-native for the installed SDK. Each task owns a session and saves its working project under its output directory. Adapter lifecycle checks use SDK doubles; licensed solver execution remains workstation-dependent.",
+    "installation_note": "The vendor SDK, a supported platform and a valid solver license are required.",
     "routes": [
       {
         "route": "executable",
