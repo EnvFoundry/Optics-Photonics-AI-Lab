@@ -240,6 +240,7 @@ TOOLS = [
 READ_ONLY = {'environment_installed', 'environment_plan', 'read_guide', 'software_search', 'software_details', 'materials', 'registered_software', 'software_integrations', 'environments',
              'discover_native_software', 'result_files', 'read_result', 'read_array', 'list_runs'}
 EXECUTING = {'environment_prepare', 'prepare_environment', 'submit_calculation', 'submit_workflow', 'sample_episodes', 'resume_run', 'run_status'}
+TASK_TOOLS = EXECUTING - {'run_status'}
 SETTINGS = {'compute_resources', 'bind_environment', 'bind_native_software', 'register_software'}
 DESTRUCTIVE = EXECUTING | SETTINGS | {'cancel_run', 'sweep_results', 'environment_remove'}
 OPEN_WORLD = EXECUTING | {'materials'}
@@ -248,7 +249,7 @@ OPEN_WORLD = EXECUTING | {'materials'}
 def listed():
     """The tools as tools/list sends them."""
     return [{'name': name, 'description': description, 'inputSchema': spec,
-             **({'execution': {'taskSupport': 'optional'}} if name == 'environment_prepare' else {}),
+             **({'execution': {'taskSupport': 'optional'}} if name in TASK_TOOLS else {}),
              'annotations': {'readOnlyHint': name in READ_ONLY, 'destructiveHint': name in DESTRUCTIVE,
                              'idempotentHint': name in READ_ONLY or name in SETTINGS or name == 'cancel_run',
                              'openWorldHint': name in OPEN_WORLD}}
@@ -528,7 +529,7 @@ def tool_result(params, cancellation=None):
         name = params['name']; args = params.get('arguments') or {}
         spec = next((s for n,d,s in TOOLS if n == name), None)
         if spec is None: raise ValueError('Unknown tool: '+name+'. Tools: '+', '.join(n for n,d,s in TOOLS))
-        if 'task' in params and name != 'environment_prepare':
+        if 'task' in params and name not in TASK_TOOLS:
             raise ValueError('This tool does not support tasks')
         value = invoke(name, arguments(name, args, spec), cancellation)
         if 'task' in params:
